@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@import "modules/variables";
+
+$border-color: darken($base-ui-color, 10%);
+
+/**
+ * IE specific css here
+ */
+
+/**
+ * Dropdown
+ */
+
+.dropdown{
+
+    .dropdown-inner{
+        border: 1px $border-color solid;
+    }
+}
+
+
+
+/**
+ * Card
+ */
+
+.docsflow-sp-card, .feedback-form{
+    border: 1px $base-ui-color solid;
+}

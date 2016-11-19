@@ -1,0 +1,647 @@
+/*------------------------------------*\
+    LIST
+\*------------------------------------*/
+
+/**
+ * List
+ */
+
+ul, ol{
+	margin-left: 2em;  
+
+	/* List items with p */
+
+	p + &{
+		//@include rem(margin-top, -0.5);
+	}
+}
+
+/**
+ * Unordered List Style
+ */
+
+ul{
+	list-style-type: disc;
+}
+
+/**
+ * Nested List
+ */
+
+li > ul, li > ol{
+	@include rem(margin-top, 0.25);  
+    @include rem(margin-bottom, 0.5);  
+}
+
+li > ul{
+    list-style: circle;
+}
+
+/**
+ * List item
+ */
+
+li{
+	@include rem(margin-bottom, 0.25);
+}
+
+
+/**
+ * Unstyled list
+ */
+
+.list-unstyled{
+    list-style: none;
+    margin-left: 0;
+    line-height: 1.4;
+
+    > li:last-child{
+        //margin-bottom: 0;
+    }   
+}
+
+
+/**
+ * List with icons
+ */
+
+.list-icons{
+
+    > li{
+        padding-left: 25px;   
+        display: block;     
+    }
+
+    .fa{
+        margin-left: -25px;
+        margin-right: 0;
+        margin-top: 3px;
+        float: left;       
+        color: #999; 
+    }
+}
+
+
+/**
+ * Item list
+ */
+
+.list-items{
+    list-style: none;
+    font-size: 14px;
+    margin-left: 0;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+    
+    a{
+        @include link-colors($color-brand, $color-brand, $color-brand);
+    }
+
+    > li{
+        border-bottom: 1px $base-ui-color solid;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        &:last-child{
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}
+
+    
+
+
+
+/**
+ * List grid
+ */
+
+.list-grid{
+    //font-size: 0;
+    //margin-left: -1px;
+    //margin-right: -1px;
+    width: 464px;
+    margin-left: -0px;
+    margin-right: -20px;
+
+    > li{
+        float: left;        
+        width: 50%;
+        width: 222px;
+        margin: 0 0 20px 0;
+        //margin: 0 20px 20px 0;
+        border-top: none;
+        border-left: none;      
+        display: block;  
+    }
+
+    > li:hover{
+        background-color: $link-color;
+        color: #fff;
+
+        .item-meta{
+            color: #fff;
+        }
+
+        &.item-bookmarked:after{
+            border-right-color: #78C0FB;
+            border-right-color: rgba(255,255,255,0.4);
+        }
+
+        a{
+            @include link-colors(#fff, #fff,#fff);
+        }
+    }
+
+    .media-content{
+        display: block;
+    }
+
+    .media-item{
+        display: block;
+        padding: 5px 0;
+        float: none;
+        overflow: hidden;        
+    }
+}
+
+    
+
+/**
+ * List date
+ */
+
+.list-events{
+    padding: 5px 0 24px 0;
+    
+
+    > li{
+
+        &, &:first-child{
+            border-top: 1px $base-ui-color solid;
+            padding: 0 0 1em 0;
+        }
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    
+
+    .media-content{
+        padding-top: 1em;        
+    }
+}
+
+
+
+/**
+ * List topics
+ */
+
+.list-topics{
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    @include rem(padding-top, 0.5);
+    @include clearfix;
+
+    > li{
+        box-sizing: border-box;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+        @include media(tablet){
+            float: left;
+            width: 100/3 * 1%;
+            padding-right: 20px;
+            margin-bottom: 0px;
+        }
+    }
+
+    > li:nth-child(3n+1){
+        clear: left;
+    }
+}
+
+
+/**
+ * List users
+ */
+
+.list-user{
+
+    > li{
+        padding: 1em 0;
+        display: table;
+        width: 100%;
+        margin-bottom: 0;
+        box-sizing: border-box;
+
+        &:hover{
+            //background-color: #FAF7FF;
+        }
+    }
+
+    .sp-module-content &{
+
+        > li:first-child{
+            padding-top: 0;
+        }
+    }
+
+    .docsflow-sp-card &{
+
+        > li{
+            padding: 1em;
+        }
+    }
+
+    p{
+        margin-bottom: 10px;
+    }
+
+    /* heading */
+
+    h3, h4{
+        margin-bottom: 0;
+    }
+
+    .img-user{
+        border-radius: 0;
+    }
+   
+    .media-item, .media-content{
+        padding-bottom: 0;        
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 15px;
+    }
+}
+
+
+/**
+ * List column
+ */
+
+.list-column{
+    list-style: none;
+    margin-left: 0;
+    line-height: 1.2;
+    @include clearfix;
+
+
+}
+
+
+/**
+ * list block
+ */
+
+.list-block{
+    clear: both;
+    margin-bottom: 0;
+    @include clearfix;
+    
+    > li{
+        border: none;
+        float: left;
+        width: 33.33%;
+        padding-left: 0;
+        padding-right: 20px;
+        //display: inline-block;
+    }
+
+}
+
+
+/**
+ * List flow
+ */
+
+.list-flow{
+    list-style: none;
+    margin-left: 0;
+    text-align: center;
+
+    > li{
+        display: block;
+        position: relative;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+
+        &:after{
+            content: " ";
+            height: 28px;
+            width: 2px;
+            border-left: 1px $base-color dashed;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+        }
+
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+
+        &:last-child:after{
+            border: none;
+        }
+    }
+
+    a{
+        display: block;
+
+
+    }
+
+    > li > a + a{
+        
+        margin-top: 10px;
+    }
+
+    .active{
+        font-weight: bold;
+    }
+}
+
+
+/**
+ * List boxed
+ */
+
+.list-boxed{
+    list-style: none;
+    margin-left: 0;
+    display: table;
+    border-spacing: 15px;
+    margin-bottom: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 30px;
+
+    > li{
+        background: #F6FCFF;
+        border: 1px $base-ui-color solid;
+        padding: 15px;        
+        margin: 0 0 40px 0;
+
+        @include media(medium){
+            display: table-cell;
+            width: 50%;
+            margin: 0;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    img{
+        margin-top: -45px;
+        margin-right: 20px;
+        vertical-align: top;
+    }
+
+    a{
+        @include link-colors($base-color, $base-color, $base-color);
+    }
+}
+
+    /**
+     * Box title
+     */
+    
+    .box-title{
+        border-bottom: 1px $base-ui-color solid;
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        span{
+            background: #F6FCFF;
+            display: inline-block;
+            position: relative;
+            top: 8px;
+            padding-right: 10px;
+        }
+    }
+
+
+    /**
+     * Box article
+     */
+    
+    .box-article{
+        @extend .epsilon;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    /**
+     * Box user
+     */
+    
+    .box-user{
+        @extend .epsilon;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 10px;
+    }
+
+
+/**
+ * Home apps
+ */
+
+.list-apps{
+    margin-left: 1.5em;
+    font-size: 14px;
+    margin-bottom: 0;
+
+    a{
+        @include link-colors($color-brand, $color-brand, $color-brand);
+    }
+    
+    > li{
+        margin: 0 0 5px 0;
+    }
+}
+
+
+/**
+ * User list
+ */
+
+.contact-methods{
+    
+    a{
+        display: block;
+    }
+}
+
+    .contact-phone, .contact-email{
+        &:before{
+            @extend %icon;
+            content: "\f095";
+            color: $base-color;
+        }
+    }
+
+    .contact-email{
+        &:before{
+            content: "\f0e0";
+        }
+    }
+
+
+    /* Image user square */
+
+    .img-user-square{
+        border-radius: $base-radius !important;
+        border-left: 4px #FF1D51 solid;
+    }
+
+
+
+/**
+ * Topics
+ */
+
+.topic-row{
+      @extend .row;    
+        padding: 1.5em 1em;
+        overflow: hidden;
+}
+
+    .topic-column{
+
+        @include media(desktop){
+            @extend .columns;
+            padding-left: 0;
+            padding-right: 0;
+            width: 50%;
+            border-left: 1px $base-ui-color solid;            
+
+            &:first-child{
+                border-left: none;
+            }
+        }
+        
+        background: #fff;
+        position: relative;
+        
+        padding-bottom: 2000em;
+        margin-bottom: -2000em;
+        
+        .column-title{
+            // padding-left: 16px;
+            padding-bottom: 0.5em;
+        }
+
+        
+        img{                        
+            float: left;
+            width: 16px;
+            margin-left: -24px;
+            margin-top: 4px;
+        }
+        
+
+        a{
+            display: block;
+            padding: 0.5em 1em;
+            position: relative;  
+            padding-right: 40px;          
+            // margin-left: -15px;
+            // padding-left: 0;
+            @include media(tablet){
+                // padding: 0.5em 1em;
+            }
+            &:hover, &:focus{
+                background-color: #eee;
+                text-decoration: none;
+            }
+
+            &.active{
+                background-color: #eee; //$color-brand;
+                // color: #fff;
+            }
+
+        }
+
+        a.loading{
+            background-image: url("../images/spinner-white.gif");
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        .link--back{
+            padding-left: 0;
+        }
+
+        .has-children{
+            padding-left: 1em;
+            padding-right: 2em;
+
+            &:after{
+                @extend %icon;
+                content: "\f105";
+                position: absolute;
+                right: 1em;
+                top: 50%;
+                margin-top: -12px;
+            }
+
+        }
+    }
+
+
+.link-pane-back{
+    margin-bottom: 0.5em;
+}
+    
+
+
+/**
+ * List plain
+ */
+
+.list-plain{
+    list-style: none;
+    margin-left: 0;
+    padding-top: 0.5em;
+}
+
+/**
+ * Favorite
+ */
+
+.list-fav{
+    > li{
+        margin-bottom: 1em;
+    }
+}
+
+
+.row-seperator{
+
+    > .columns:last-child{
+        border-left: 1px #ccc solid;
+    }
+}
+
+
+/**
+ * Activity meta
+ */
+
+.activity-meta{
+    font-size: 12px;
+    color: #999;
+    padding-top: 1em;
+}

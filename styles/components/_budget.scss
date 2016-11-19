@@ -1,0 +1,655 @@
+/**
+ * App root
+ */
+#root{
+    min-height: 400px;
+}
+
+.budget-status{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background-color: #957d98 !important;
+    color: #fff !important;
+    border-bottom: 1px #DFDFDF solid;
+    margin-bottom: 0em;
+    text-transform: uppercase;
+
+
+    > div{
+        display: table-cell;
+        text-align: center;
+        padding: 0.5em 1em;
+        vertical-align: top;
+        padding-top: 1.5em;
+    }
+
+    .budget-status-total{
+        padding-top: 0.5em;
+    }
+}
+
+    .budget-status-count{
+        display: block;
+        text-align: center;
+        @include font-size(32px, false)
+    }
+
+    .budget-status-name{
+        @include font-size(12px, false)
+    }
+
+
+/**
+ * Budget list
+ */
+
+.budget-list{
+
+
+}
+    /**
+     * group
+     */
+
+    .budget-group-title{
+        @include font-size(20px, false);
+        font-weight: 600;
+        border-bottom: 1px $base-ui-color solid;
+        padding: 0.8em;
+        margin: 0;
+        position: relative;
+        padding-left: 40px;
+        cursor: pointer;
+
+        &:before{
+            @extend %icon;
+            content: "\f056";
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            color: #E3571A;
+        }
+
+        .group-closed &{
+            &:before{
+                content: "\f055";
+            }
+        }
+    }
+
+    .group-admin-topic{
+        width: 100%;
+    }
+
+    .budget-group-title-inner{
+        font-size: 18px;
+        font-weight: normal;
+        cursor: pointer;
+
+        position: relative;
+        margin: 0;
+        padding: 1em 0;
+        padding-left: 24px;
+        border-bottom: 1px $base-ui-color solid;
+
+        &:before{
+            @extend %icon;
+            content: "\f067";
+            position: absolute;
+            left: 0px;
+            top: 18px;
+            color: #E3571A;
+        }
+
+        .inner-group-open &{
+            &:before{
+                content: "\f068";
+            }
+        }
+    }
+
+    .budget-list-item-inner{
+        padding: 1em 0;
+        border-bottom: 1px $base-ui-color solid;
+        padding-left: 30px;
+
+        &:hover{
+            background-color: #eee;
+        }
+    }
+
+    .item-active{
+        &, &:hover{
+            background-color: #ffc;
+        }
+    }
+
+    /**
+     * CLosed group
+     */
+
+    .group-closed {
+        .budget-list-item{
+            display: none;
+        }
+    }
+
+    /**
+     * Inner
+     */
+
+    .budget-list-item-inner{
+        position: relative;
+        display: block;
+
+        &, &:hover, &:visited{
+            color: $base-color;
+        }
+
+        &:hover{
+            text-decoration: none;
+        }
+
+        .inner-group-closed &{
+            display: none;
+        }
+    }
+
+
+
+    /**
+     * item
+     */
+
+    .budget-list-item{
+        padding: 0;
+        padding-left: 30px;
+        position: relative;
+        // border-bottom: 1px $base-ui-color solid;
+        margin: 8px 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .budget-item-checkbox{
+            position: absolute;
+            top: 22px;
+            left: 8px;
+        }
+    }
+
+    .budget-list-subitem{
+        padding: 0.5em 0;
+    }
+
+
+    /**
+     * Status
+     */
+
+    .budget-item-status{
+        position: absolute;
+        right: 0px;
+        top: 0;
+        background-color: #0699F9;
+        color: white;
+        padding: 2px 5px;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-bottom-left-radius: 5px;
+    }
+
+    .budget-item-status-view{
+        left: 0;
+        right: auto;
+        border-radius: 0;
+        border-bottom-right-radius: 5px;
+    }
+
+    .sp-budget-card{
+        .docsflow-card-body{
+            padding-top: 3em;
+        }
+    }
+
+    /**
+     * Item title
+     */
+
+    .budget-item-title{
+        @include font-size(18px, false);
+        font-weight: normal;
+    }
+
+
+/**
+ * Actions
+ */
+
+.budget-actions{
+    padding: 1em 1em 1em 1em;
+    border-bottom: 1px $base-ui-color solid;
+    @include clearfix;
+
+    .link-export-excel{
+        color: #e3571a !important;
+        float: right;
+        &:before{
+            @extend %icon;
+            content: "\f019";
+        }
+    }
+}
+
+.link-speech, .link-speech-undo{
+    &:before{
+        @extend %icon;
+        content: "\f064";
+    }
+    margin-left: 1em;
+}
+
+    .link-speech-undo{
+        &:before{
+            content: "\f112";
+        }
+    }
+
+/**
+ * Status trial
+ */
+
+.status-trail{
+    font-size: 12px;
+    color: #999;
+
+    > span{
+        display: inline-block;
+        position: relative;
+        padding-right: 55px;
+        &:after{
+            content: " ";
+            border-top: 1px #999 dotted;
+            width: 25px;
+            height: 1px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        &:before{
+            @extend %icon;
+            content:"\f00c";
+            position: absolute;
+            right: 35px;
+            top: 0px;
+            color: green;
+        }
+
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    > .inactive{
+        &:before{
+            content: "\f00d";
+            color: red;
+        }
+    }
+}
+
+
+/**
+ * View message link
+ */
+
+.link-view-message{
+    display: block;
+}
+
+
+/**
+ * Loader
+ */
+
+.momster-loader{
+    text-align: center;
+    padding: 2em 0;
+}
+
+
+
+// html,
+// body { height: 100%; }
+
+// body {
+//   display: table;
+//   width: 100%;
+// }
+
+// .page-row {
+//   display: table-row;
+//   height: 1px;
+// }
+
+// .page-row-expanded { height: 100%; }
+
+/**
+ * Card link
+ */
+
+.docsflow-card-link{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+
+/**
+ * Topic cell actions
+ */
+
+.topic-cell-actions{
+    display: inline-block;
+    margin-left: 1em;
+    font-size: 12px;
+    display: none;
+
+    .budget-list-subitem:hover &, .budget-group-title:hover &{
+        display: inline-block;
+    }
+
+    .budget-list-subitem--editing &, .budget-list-subitem--editing:hover &{
+        display: none;
+    }
+
+    a{
+        margin: 0 0.5em;
+        color: #888;
+    }
+}
+
+    /* Sub item */
+
+    .budget-list-subitem{
+        a{
+            color: $base-color;
+        }
+
+        .docsflow-section-form{
+            margin-top: 1em;
+        }
+    }
+
+/**
+ * Budget topic add form
+ */
+
+.budget-topic-add-form{
+    padding: 1em;
+    background: #eee;
+    border-radius: 5px;
+}
+
+
+/**
+ * Admin topics
+ */
+
+.group-admin-topic{
+
+    .budget-group-title{
+        padding-left: 54px;
+
+        &:before{
+            left: 28px;
+        }
+    }
+
+    .drag-handle-main-topic{
+        position: absolute;
+        left: 0;
+        top: 18px;
+    }
+
+    .budget-list-item{
+        padding-left: 24px;
+        margin-left: 0;
+        border-bottom: none;
+    }
+}
+
+
+/**
+ * Admin pane;
+ */
+
+.user-add-dropdown{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+
+/**
+ * Filter
+ */
+
+.docsflow-sp-card-search{
+    position: relative;
+    padding-right: 40px;
+
+    @include media(tablet){
+        padding-right: 0;
+    }
+    @include media(desktop){
+        padding-right: 40px;
+    }
+
+    .link-toggle-filter{
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 40px;
+        text-align: center;
+
+        @include media(medium){
+            display: none;
+        }
+    }
+}
+
+  .sp-sidebar{
+        .sp-module{
+            display: none;
+            @include media(medium){
+                display: block;
+            }
+        }
+    }
+
+    .filter-open {
+        .sp-module{
+            display: block;
+        }
+    }
+
+/**
+ * Sidemenu
+ */
+
+.nav-sidemenu{
+
+    .facet-showmore{
+        &:after{
+            @extend %icon;
+            content: "\f107";
+            margin-left: 0.5em;
+        }
+    }
+
+    .facet-showless{
+        &:after{
+            content: "\f106";
+        }
+    }
+}
+
+/**
+ * User role item
+ */
+
+.user-role-item{
+    &:after{
+        content: ", "
+    }
+
+    &:last-child{
+        &:after{
+            content: "";
+        }
+    }
+}
+
+
+.user-role-designation{
+    display: block;
+    font-weight: 600;
+}
+
+
+/** Actions */
+
+.budget-cut-actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    a{
+        margin-left: 1em;
+    }
+}
+
+
+/**
+ * File attachments
+ */
+
+.file-attachment{
+  color: #e3571a !important;
+    display: block;
+}
+
+.file-attachment-block{
+  color: #e3571a !important;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.file-attachment-size, .file-attachment-date{
+    color: #888;
+    margin-right: 1em;
+}
+
+
+/**
+ * Sub topic list
+ */
+
+.sub-topic-list, .main-topic-list{
+    list-style: none;
+    margin: 0;
+    padding-bottom: 1em;
+    clear: both;
+}
+
+    .topic-drag-handle {
+        cursor: move;
+        color: #888;
+
+        &:hover{
+            color: $base-color;
+        }
+    }
+
+    /**
+     * When disabled
+     */
+
+    .disable-sort{
+        .topic-drag-handle{
+            display: none;
+        }
+
+        .budget-group-title{
+            padding-left: 26px;
+
+            &:before{
+                left: 0;
+            }
+        }
+    }
+
+
+/**
+ * Input disabled
+ */
+
+.input-disabled{
+    color: #888;
+    cursor: not-allowed;
+}
+
+
+/**
+ * Link edit question
+ */
+
+.link-edit-question{
+  color: #e3571a !important;
+    float: right;
+}
+
+
+/**
+ * Sumit control
+ */
+
+.docsflow-submit-control{
+    padding-bottom: 1em;
+}
+
+
+
+.fadeIn-enter {
+  opacity: 0.01;
+}
+
+.fadeIn-enter.fadeIn-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.fadeIn-leave {
+  opacity: 1;
+}
+
+.fadeIn-leave.fadeIn-leave-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
+}
+
+.fadeIn-appear {
+  opacity: 0.01;
+}
+
+.fadeIn-appear.fadeIn-appear-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}

@@ -1,0 +1,36 @@
+{
+	"data": [
+		{
+			"memberOfParliament": {
+				"id": 2,
+				"name": "Name of the MP"
+			},
+			"hods": [
+				{
+					"id": 2,
+					"name": "Hod Name 1"
+				},
+				{
+					"id": 3,
+					"name": "Hod Name 2"
+				}
+			]
+		},
+		{			
+			"memberOfParliament": {
+				"id": 2,
+				"name": "Name of the MP 2"
+			},
+			"hods": [
+				{
+					"id": 2,
+					"name": "Hod Name 1"
+				},
+				{
+					"id": 3,
+					"name": "Hod Name 2"
+				}
+			]
+		}
+	]
+}

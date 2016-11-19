@@ -1,0 +1,80 @@
+{
+    "data": [
+        {
+            "details": null,
+            "attachments": [
+                {
+                    "fileName": "MOM.MOMster.Services.deploy-readme.txt",
+                    "fileSize": "4 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/MOM.MOMster.Services.deploy-readme.txt",
+                    "id": 1,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "HighTrustCert.pfx",
+                    "fileSize": "3 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/HighTrustCert.pfx",
+                    "id": 2,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "TEMP.TXT",
+                    "fileSize": "1 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/TEMP.TXT",
+                    "id": 3,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "Global.asax",
+                    "fileSize": "0 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/Global.asax",
+                    "id": 4,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "xyz.txt",
+                    "fileSize": "8 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/xyz.txt",
+                    "id": 5,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "article.html",
+                    "fileSize": "3 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/article.html",
+                    "id": 6,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "Master.xml",
+                    "fileSize": "31 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/Master.xml",
+                    "id": 7,
+                    "date": "0001-01-01T00:00:00"
+                },
+                {
+                    "fileName": "common.js",
+                    "fileSize": "18 KB",
+                    "downloadUrl": "/sites/COS/Final Draft Details/common.js",
+                    "id": 8,
+                    "date": "0001-01-01T00:00:00"
+                }
+            ],
+            "hodDrafting": {
+                "id": null,
+                "name": null
+            },
+            "liasonOfficer": {
+                "id": null,
+                "name": null
+            },
+            "date": "November 07, 2015",
+            "available": true,
+            "types": [
+                "Approved draft",
+                "Anticipated Q&A",
+                "Supplementary Info (upto confidential only)"
+            ]
+        }
+    ]
+}

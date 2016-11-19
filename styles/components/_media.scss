@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    MEDIA
+\*------------------------------------*/
+
+/**
+ * List media
+ */
+
+.ui-media{
+    display: table;
+    width: 100%;
+    padding-bottom: 12px;
+}
+
+
+.media-item{
+    
+    &:first-child{
+        margin-top: 0;
+    }
+
+    float: none;    
+    margin-right: 0;
+    padding-bottom: 10px;
+
+    @include media(small){
+        padding-bottom: 0;        
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 15px;
+    }
+
+    img{
+        max-width: none;
+    }
+
+    
+}
+
+.media-content{
+        
+
+    @include media(small){
+        
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 0px;
+        display: table-cell;
+        vertical-align: top;
+        width: 100%;
+    }
+}
+
+.media-shift{
+    margin-left: 115px;
+}
+
+
+/**
+ * Sp images
+ */
+
+.sp-image{
+    padding: 0;
+    margin: 0 0 16px 0;
+
+    img{
+        vertical-align: top;
+        max-width: 100%;
+    }
+
+    .docsflow-card-body &{
+        margin-left: -1em;
+        margin-right: -1em;
+        overflow: hidden;        
+    }
+}
+
+
+/**
+ * Author details
+ */
+
+.media-author-details .meta-author{
+    &:after{
+        content: "\A";
+        white-space: pre;
+    }
+
+    & + a{
+        padding-left: 0;
+        margin-left: 0;
+        &:before{
+            content: "";            
+        }
+    }
+}
+
+.media-author-details{
+    
+    @include media(tablet){
+        @include rem(padding-bottom);
+    }
+
+    .sp-meta{
+        font-size: 15px;    
+    }
+}
+
+
+/**
+ * Image user
+ */
+
+.img-user{
+    border-radius: 100%;
+}

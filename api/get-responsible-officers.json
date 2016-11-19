@@ -1,0 +1,18 @@
+{
+	"data": [
+		{
+			"id": "1212",
+			"name": "Lisa Lawrence",
+			"designation": "HOD",
+			"role": [2],
+			"image": "images/profile-img.png"
+		},
+		{
+			"id": "1213",
+			"name": "Christopher Brown",
+			"designation": "Executive",
+			"role": [3],
+			"image": "images/profile-img.png"
+		}
+	]
+}

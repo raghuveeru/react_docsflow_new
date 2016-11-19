@@ -1,0 +1,73 @@
+/**
+ * Import font awesome
+ */
+@import "fontawesome/scss/font-awesome.scss";
+
+
+
+/*
+Explicitly define a Segoe UI font-family
+*/
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light"),
+        local("SegoeUI-Light"),
+        url('../fonts/segoeuil-webfont.eot'),
+        url('../fonts/segoeuil-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/segoeuil-webfont.woff') format('woff'),
+        url('../fonts/segoeuil-webfont.ttf') format('truetype'),
+        url('../fonts/segoeuil-webfont.svg#segoe_uilight') format('svg');
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    src: local("Segoe UI"),
+        url('../fonts/segoeui-webfont.eot'),
+        url('../fonts/segoeui-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/segoeui-webfont.woff') format('woff'),
+        url('../fonts/segoeui-webfont.ttf') format('truetype'),
+        url('../fonts/segoeui-webfont.svg#segoe_uiregular') format('svg');
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: local("Segoe UI Semibold"),        
+        local("SegoeUI-Semibold"),        
+        url('../fonts/segoeuisb-webfont.eot'),
+        url('../fonts/segoeuisb-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/segoeuisb-webfont.woff') format('woff'),
+        url('../fonts/segoeuisb-webfont.ttf') format('truetype'),
+        url('../fonts/segoeuisb-webfont.svg#segoe_uisemibold') format('svg');
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 700;
+    src: local("Segoe UI Bold"),
+        local("SegoeUI-Bold"),
+        url('../fonts/segoeuib-webfont.eot'),
+        url('../fonts/segoeuib-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/segoeuib-webfont.woff') format('woff'),
+        url('../fonts/segoeuib-webfont.ttf') format('truetype'),
+        url('../fonts/segoeuib-webfont.svg#segoe_uibold') format('svg');
+}
+
+
+/** Add some margin to the icons */
+
+.fa{
+    margin-right: 0.3em;
+
+    &:before{
+        text-decoration: none;
+        display: inline-block;
+    }    
+}
+
+    /* Last */
+
+    .fa-last{
+        margin-right: 0;
+        margin-left: 0.5em;
+    }

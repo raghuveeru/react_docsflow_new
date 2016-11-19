@@ -1,0 +1,176 @@
+/*------------------------------------*\
+    PHONE.CSS
+\*------------------------------------*/
+
+/**
+ * Heading reset
+ */
+
+@include headings(1,6){
+	line-height: 1.25;
+}
+
+
+/**
+ * Heading font sizes
+ */
+
+h1, .alpha{
+    @include font-size($h1-base-size, false);        
+}
+
+h2, .beta{
+    @include font-size($h2-base-size, false);    
+}
+
+h3, .gamma{
+    @include font-size($h3-base-size, false);        
+}
+
+h4, .delta{
+    @include font-size($h4-base-size, false);    
+}
+
+h5, .epsilon{
+    @include font-size($h5-base-size, false);    
+}
+
+h6, .zeta{
+    @include font-size($h6-base-size, false);    
+}
+
+
+/**
+ * Heading margins
+ */
+
+h1{
+	@include rem(margin-bottom, 1);
+    font-weight: 300;    
+}  
+
+h2{
+	@include rem(margin-bottom, 0.25);    
+}
+
+h3{
+	@include rem(margin-bottom, 0.25);
+    //@extend .text-semi;    
+}
+
+h4{
+    @include rem(margin-bottom, 0.25);    
+}
+
+h5, h6{
+    @include rem(margin-bottom, 0.25);
+}
+
+/**
+ * Text semi
+ */
+
+.text-semi{
+    font-weight: 600;    
+}
+
+
+/**
+ * Text bold
+ */
+
+.text-bold{
+    font-weight: bold;
+}
+
+/**
+ * Text small
+ */
+
+.text-small{
+    @include font-size(14px, false);
+}
+
+
+/**
+ * Text xsmall
+ */
+
+.text-xsmall{
+    @include font-size(12px, false);
+}
+
+/**
+ * Text light
+ */
+
+.text-light{
+    font-weight: 200;
+}
+
+/**
+ * Text summary
+ */
+
+.text-summary{
+    @include font-size(20px, false);
+    font-weight: 600;
+    line-height: 1.4;
+    @include rem(margin-bottom);
+}
+
+
+/**
+ * Section title
+ */
+
+.section-title{
+    @extend .delta;    
+    font-weight: 600;    
+    @include rem(margin-bottom, 0.5);
+    text-transform: uppercase;
+        
+    /* More */
+
+    .link-more{
+        font-size: 13px;
+        float: right;
+        margin-top: 8px;
+        margin-left: 10px;
+
+        &, &:hover, &:visited{
+            color: $color-brand;
+        }
+    }
+}
+
+
+    /**
+     * Section link
+     */
+    
+    .section-link{
+        &:after{
+            @extend %icon;
+            content: "\f105";
+            margin-left: 0.5em;
+            margin-right: 0;            
+        }
+    }
+
+/**
+ * Text icons
+ */
+
+.text-icon{
+    margin-bottom: 15px;
+}
+
+
+/**
+ * Text dept
+ */
+
+.heading-dept{
+    padding-top: 1em;
+}

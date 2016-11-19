@@ -1,0 +1,251 @@
+/*------------------------------------*\
+    FORM
+\*------------------------------------*/
+
+/**
+ * Remove Clear icon on IE 11
+ */
+
+::-ms-clear {
+    display: none;
+}
+
+::-ms-reveal {
+    width : 0;
+    height: 0;
+}
+
+/**
+ * Input Elements
+ */
+
+.text-input,
+textarea{
+    background: #fff;
+    border: 2px $input-border-color solid;
+    border-radius: $base-radius;
+    padding: $input-padding;
+    transition: border, outline, box-shadow 0.1s ease-in;
+    vertical-align: middle;
+    outline: none;
+    width: 100%;
+    @include rem(margin-bottom);
+    box-sizing: border-box;
+    &:focus{
+        @extend %focus-style;
+    }
+}
+
+    /**
+     * large input
+     */
+
+    .input-large{
+        @include font-size(18px, false);
+    }
+
+
+
+    /**
+     * Text wrap
+     */
+
+    .text-wrap{
+        position: relative;
+        //@include rem(margin-bottom);
+
+        .docsflow-btn{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 0px;
+            height: 100%;
+            color: #999;
+            width: 40px;
+
+            > .fa{
+                font-size: 20px;
+            }
+        }
+
+
+        .text-input{
+            padding-right: 40px;
+            margin-bottom: 0;
+        }
+
+
+        /* remove link */
+
+        a{
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            margin-top: -11px;
+        }
+    }
+
+    /**
+     * Disabled
+     */
+
+    [disabled]{
+        color: #999;
+    }
+
+    /**
+     * Input wrap
+     */
+
+    .input-wrap{
+        position: relative;
+    }
+/**
+ * Select
+ */
+
+select{
+	@include font-size(16px, false);
+    @include rem(margin-bottom);
+    color: $base-color;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+/**
+ * Label
+ */
+
+%label{
+    @include rem(padding-bottom, 0.25);
+}
+
+label{
+    @extend %label;
+    cursor: pointer;
+
+    /* Normal case */
+
+    > span{
+        text-transform: none;
+    }
+}
+
+    /**
+     * Checkbox label
+     */
+
+    .label-checkbox, .label-radio{
+        color: $base-color;
+        text-transform: none;
+        display: inline-block;
+        vertical-align: top;
+        @include font-size(14px, false);
+        padding-left: 20px;
+        padding-bottom: 0;
+        @include rem(margin-bottom);
+
+        + .label-checkbox, + .label-radio{
+            margin-left: 15px;
+        }
+
+        input{
+            float: left;
+            margin-left: -20px;
+            margin-top: 0.25em;
+            margin-top: 5px \9; /* Internet Explorer 8 Fix */
+            margin-right: 0;
+        }
+    }
+
+
+/**
+ * Error label
+ */
+
+label.label-error{
+    color: $color-error;
+    text-transform: none;
+    @include font-size(14px, false);
+    margin-top: 0.5em;
+    letter-spacing: 0;
+    display: block;
+}
+
+    /**
+     * Input error
+     */
+
+    .input-error{
+        &, &:focus{
+            border-color: $color-error;
+        }
+    }
+
+
+/**
+ * Select label
+ */
+
+.label-select{
+    display: block;
+    // color: #666;
+    // font-weight: 600;
+    transform: translateY(0.5em) scale(0.7);
+    // color: #777;
+    transform-origin: 0 0;
+    // font-weight: bold;
+}
+
+
+
+/**
+ * Section form
+ */
+
+.docsflow-section-form{
+    padding: 1em;
+    border: 1px #DFDFDF solid;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 0 #C2C2C2;
+    margin-bottom: 1em;
+}
+
+
+/**
+ * Assign form
+ */
+
+.assign-form{
+    padding: 1em;
+    // border-radius: $base-radius;
+    // box-shadow: 0 0 2px 0 #C2C2C2;
+    // border: 1px #DFDFDF solid;
+    // margin-bottom: 2em;
+}
+
+
+/**
+ * Label block
+ */
+
+.label-block{
+    display: block;
+    margin-bottom: 8px;
+
+    & + .label-block{
+        margin-left: 0;
+    }
+}
+
+
+/**
+ * Hint text
+ */
+
+.text-hint{
+    display: block;
+    padding-bottom: 1em;
+}

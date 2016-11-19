@@ -1,0 +1,18 @@
+{
+	"data": [
+		{
+			"id": "1",
+			"name": "Test user",
+			"permissions": [
+        {
+          "id": "8",
+          "name": "myinbox"
+        },
+        {
+          "id": "11",
+          "name": "searchworkflow"
+        }
+      ]
+		}
+	]
+}

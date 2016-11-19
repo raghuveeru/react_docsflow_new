@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    FOOTER.CSS
+\*------------------------------------*/
+
+.sp-footer{
+    background: #2d3642;
+    padding: 2em 1em;
+    color: #fff;
+    @include clearfix;
+
+    a{
+        @include link-colors(#fff, #fff, #fff);
+    }
+
+
+    p{
+
+        @include media(tablet){
+            float: left;
+        }
+    }
+
+}
+
+.footer-links{
+
+
+    @include media(tablet){
+        float: right;
+        clear: right;
+    }
+
+    a{
+        margin-right: 1em;
+
+        @include media(tablet){
+            margin-right: 0;
+            margin-left: 1em;
+            border-left: 1px #aaa solid;
+            padding-left: 1em;
+
+
+            &:first-child{
+                border-left: none;
+            }
+        }
+    }
+}
+
+
+.footer-social{
+
+    padding-bottom: 1em;
+
+    @include media(tablet){
+        float: right;
+    }
+
+    a{
+        background: #3b5999;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        font-size: 22px;
+        margin-right: 8px;
+        margin-left: 0px;
+
+        @include media(tablet){
+            margin-left: 8px;
+            margin-right: 0;
+        }
+    }
+
+    .fa{
+        margin: 0;
+    }
+
+    .link-tw{
+        background-color: #55acee;
+    }
+
+    .link-bl{
+
+        background: #FF8E33 url(../images/icon-blogger.png) center center no-repeat;
+    }
+
+    .link-y{
+        background-color: #CC181E;
+    }
+}
+
+
+/**
+ * Module footer
+ */
+
+.module-footer{
+    background: #333;
+    color:white;
+    padding: 2em 0;
+    // font-size: 14px;
+
+    a{
+        color: #BADBFD;
+        margin: 0 1em;
+    }
+}

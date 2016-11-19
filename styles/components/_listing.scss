@@ -1,0 +1,285 @@
+/*------------------------------------*\
+    Listing
+\*------------------------------------*/
+
+.sp-listing{
+    //@include rem(margin-bottom, 1);
+    background: #fff;
+    //border: 1px $base-ui-color solid;
+}
+
+/**
+ * Sp Article
+ */
+
+.docsflow-sp-card{
+    //padding: 1em;
+    //border: 1px $base-ui-color solid;
+    background: #dfefea !important;
+    position: relative;
+    @include rem(margin-bottom);
+    box-shadow: 0 1px 4px 0px rgba(0,0,0,0.3);
+
+
+    .docsflow-sp-card + &{
+        border-top: none;
+    }
+
+    .sp-listing &{
+        margin-bottom: 0;
+    }
+
+    &:last-child{
+        //border-bottom: none;
+        //margin-bottom: 0;
+    }
+
+    /* heading */
+
+    // h2 > a, h3 > a, h4 > a{
+    //     color: $color-brand;
+    // }
+
+    /* Meta */
+
+    .sp-meta{
+
+    }
+
+    .meta-hilite{
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+
+/**
+ * Article
+ */
+
+.sp-article{
+    padding: 1em;
+    //background: #fff;
+    position: relative;
+    border-bottom: 1px $base-ui-color solid;
+
+    &:last-child{
+        border-bottom: none;
+    }
+}
+
+    /**
+     * Card body
+     */
+
+    .docsflow-card-body{
+        padding: 1em;
+    }
+
+    /**
+     * Card header
+     */
+
+    .card-header{
+        img{
+            max-width: 100%;
+            margin-bottom: -80px;
+
+            @include media(tablet){
+                margin-bottom: -100px;
+            }
+            display: block;
+        }
+    }
+
+    /**
+     * Staff name
+     */
+
+    .staff-profile-name{
+        @include media(small){
+            height: 80px;
+            padding-top: 1em;
+            a{
+
+                    color: #fff;
+            }
+        }
+    }
+
+    /**
+     * Small listing
+     */
+
+    .sp-listing-small{
+
+        .docsflow-sp-card{
+            font-size: 14px;
+            padding: 15px;
+        }
+
+
+        .card-title{
+            @extend .epsilon;
+            padding-bottom: 0;
+        }
+    }
+
+    /**
+     * Pushed card
+     */
+
+    .docsflow-sp-card-push{
+        @include rem(margin-bottom);
+    }
+
+
+    /**
+     * Slim
+     */
+
+    .docsflow-sp-card-slim{
+        padding: 0;
+    }
+
+/**
+ * Card title
+ */
+
+.card-title{
+    @extend .delta;
+    padding-bottom: 5px;
+    //font-weight: 600;
+
+    a, a:hover, a:visited{
+        color: $base-color;
+    }
+}
+
+
+
+/**
+ * Card contributor
+ */
+
+.docsflow-sp-card-contributor{
+    padding-bottom: 5px;
+    border-bottom: none;
+}
+
+
+
+/**
+ * Sp card masthead
+ */
+
+.docsflow-sp-card-mast{
+
+    padding-bottom: 0;
+    border-bottom: none;
+
+    .docsflow-btn-mast{
+        float: right;
+        margin-bottom: 0;
+    }
+
+    .text-wrap{
+        float: left;
+        width: 350px;
+        padding-bottom: 10px;
+    }
+
+    .ui-tabs{
+        margin-bottom: 0;
+        //border-bottom: none;
+    }
+
+    & + .sp-listing{
+        margin-top: -1px;
+    }
+}
+
+
+/**
+ * Gallery
+ */
+
+.card-gallery{
+
+    h2{
+        @extend .delta;
+        padding-bottom: 0.5em;
+    }
+}
+
+
+/**
+ * Newsfeed
+ */
+
+.docsflow-sp-card-newsfeed{
+    margin-bottom: 0;
+}
+
+
+/**
+ * Sp Card search
+ */
+
+.docsflow-sp-card-search{
+    padding: 1em 0 1em 1em;
+    border-bottom: 1px $base-ui-color solid;
+    box-shadow: none;
+
+    .text-wrap{
+
+        @include media(desktop){
+            max-width: 400px;
+        }
+    }
+}
+
+
+/**
+ * Staff
+ */
+
+.docsflow-sp-card-staff{
+    margin-bottom: 0;
+    padding: 0em;
+}
+
+
+
+/**
+ * Section search
+ */
+
+.sp-section-search{
+    padding: 0 0 2em 0;
+    background: transparent;
+    border: none;
+    max-width: 400px;
+}
+
+
+/**
+ * Browser
+ */
+
+.docsflow-sp-card-browser{
+    padding-bottom: 2em;
+}
+
+/**
+ * Small search
+ */
+
+.sp-search-top{
+    border-bottom: none;
+    padding-left: 0;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+}

@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    TABLET.CSS
+\*------------------------------------*/
+
+
+/**
+ * Heading font sizes
+ */
+
+h1, .alpha{
+    @include font-size($h1-tablet-size, false);        
+}
+
+h2, .beta{
+    @include font-size($h2-tablet-size, false);    
+}
+
+h3, .gamma{
+    @include font-size($h3-tablet-size, false);        
+}
+
+h4, .delta{
+    @include font-size($h4-tablet-size, false);    
+}
+
+h5, .epsilon{
+    @include font-size($h5-tablet-size, false);    
+}
+
+h6, .zeta{
+    @include font-size($h6-tablet-size, false);    
+}

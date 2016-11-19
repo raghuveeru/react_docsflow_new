@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    BASE.CSS
+\*------------------------------------*/
+
+/**
+ * HTML
+ */
+
+html{
+    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    background: #f2f2f2;
+    font-size: 16px; /* Sharepoint Fix */
+    color: $base-color;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+/**
+ * Container
+ */
+
+.docsflow-container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/**
+ * iframe
+ */
+
+iframe, img{
+  vertical-align: top;
+}
+
+/**
+ * Remove Clear icon on IE 11
+ */
+
+::-ms-clear {
+    display: none;
+}
+
+::-ms-reveal {
+    width : 0;
+    height: 0;
+}
+
+
+/**
+ * Theme
+ */
+
+.theme-media-report{
+
+    &:before{
+        background-color: $color-theme-blue;
+    }
+}
+
+.theme-momerang{
+
+    &:before{
+        background-color: $color-theme-green;
+    }
+}
+
+.theme-momentum{
+    &:before{
+        background-color: $color-theme-pink;
+    }
+}
+
+.theme-announcement{
+
+    &:before{
+        background-color: $color-theme-red;
+    }
+}
+
+.theme-event{
+
+    &:before{
+        background-color: $color-theme-orange;
+    }
+}
+
+.theme-survey{
+    &:before{
+        background-color: $color-theme-purple;
+    }
+}
+
+.theme-gallery{
+    &:before{
+        background-color: $color-theme-forest;
+    }
+}

@@ -1,0 +1,52 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"type": "budget_cuts",
+			"title": "Manpower challenges",
+			"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+			"status": "Final answer",
+			"topic": {
+				"id": "1",
+				"name": "Workplace Safety & Health"
+			},
+			"budgetCutTopic": {
+				"id": "1231312",
+				"name": "Manpower challenges"
+			},
+			"memberOfParliament": {
+				"id": "2",
+				"name": "Alex Yam"
+			},
+			"hodSourcing": {
+				"id": 2,
+				"name": "DOSHI- Chan Yew Kwong"
+			},
+			"hodDrafting": "Richard Wong",
+			"year": "2015",
+			"relationships": {
+				"category": "Workplace Safety & Health"
+			},
+			"liasonOfficer": [
+				{
+					"id": "1212",
+					"name": "Lisa Lawrence",
+					"designation": "HOD",
+					"role": ["Liason Officers"],
+					"image": "images/profile-img.png"
+				},
+				{
+					"id": "1213",
+					"name": "Christopher Brown",
+					"designation": "Executive",
+					"role": ["Liason Officers"],
+					"image": "images/profile-img.png"
+				}
+			],
+			"userId": "blahblahblah",
+			"fileReferenceNo": "-",
+			"time": "50",
+	        "completedStatus": ["Draft", "Speech"]
+		}
+	]	
+}

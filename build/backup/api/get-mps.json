@@ -1,0 +1,29 @@
+{
+	"data": [
+		{
+			"id": "1212",
+			"name": "Lisa Lawrence",
+			"designation": "HOD",
+			"role": ["Member of Parliament"],
+			"hodOfficer": [],
+			"image": "images/profile-img.png"
+		},
+		{
+			"id": "1213",
+			"name": "Christopher Brown",
+			"designation": "Executive",
+			"role": ["Member of Parliament"],
+			"hodOfficer": [
+				{
+					"id": "1213",
+					"name": "Christopher Brown"
+				},
+				{
+					"name": "Nair Kong",
+					"id": "2"
+				}
+			],
+			"image": "images/profile-img.png"
+		}
+	]
+}

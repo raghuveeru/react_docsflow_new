@@ -1,0 +1,74 @@
+/*------------------------------------*    PRINT.CSS
+\*------------------------------------*/
+/**
+ * Font size
+ */
+html {
+  font-size: 62.5%;
+  color: #000; }
+
+a[href^="http://"]:after, a[href^="https://"]:after, a[href^="/"]:after {
+  content: " (" attr(href) ")"; }
+
+a, a:visited {
+  text-decoration: underline;
+  color: #000; }
+
+select {
+  background: #fff; }
+
+/**
+ * Hide modules
+ */
+.sp-global-nav,
+.sp-suite-bar,
+.nav-list,
+.sp-search-form,
+.nav-crumb,
+.nav-pagination,
+.nav-sidemenu,
+.docsflow-sp-card-contributor,
+.link-filter-toggle {
+  display: none; }
+
+/**
+ * Logo
+ */
+.logo-main {
+  display: block;
+  text-align: left;
+  margin: 0; }
+  .logo-main img {
+    max-width: 115px; }
+
+/**
+ * Cards
+ */
+.docsflow-sp-card, .sp-module, .sp-module-content {
+  border: none;
+  padding: 0; }
+
+/* Card */
+/* Image */
+.docsflow-sp-card-body .sp-image {
+  margin-left: 0;
+  margin-right: 0; }
+
+/**
+ * Sidebar
+ */
+.sp-sidebar, .docsflow-sp-content {
+  float: none; }
+
+/**
+ * Collection banner
+ */
+.img-collection-banner {
+  display: block;
+  margin-bottom: 10px; }
+
+/**
+ * Card title
+ */
+.card-title {
+  font-weight: bold; }

@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    GLOBAL NAV
+\*------------------------------------*/
+
+.sp-global-nav{
+    background: $global-nav-background;
+    color: $global-nav-color;
+    font-size: 12px;
+    text-align: right;
+    height: 35px;
+    line-height: 35px;
+    text-transform: uppercase;
+
+    a{
+        @include link-colors($global-nav-link-color, $global-nav-link-color, $global-nav-link-color);
+    }
+
+    a{
+        padding: 0 15px;
+
+        &, &:hover{
+            text-decoration: none;
+        }
+
+        &:hover{
+            color: #fff;
+        }
+    }
+}

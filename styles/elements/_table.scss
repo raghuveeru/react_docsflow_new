@@ -1,0 +1,113 @@
+/*------------------------------------*\
+    TABLE
+\*------------------------------------*/
+
+.docsflow-table{
+	width: 100%;
+	border-collapse: collapse;
+
+
+	td, th{
+		padding: 0.7em 1em;
+		text-align: left;
+		vertical-align: top;
+	}
+}
+
+
+/**
+ * Bordered table
+ */
+
+.docsflow-table--bordered{
+
+	th{
+		background: $color-table;
+		border: 1px $color-table-border solid;
+	}
+
+	td{
+		border: 1px $color-table solid;
+	}
+}
+
+
+/**
+ * Zebra
+ */
+
+.docsflow-table--zebra{
+
+	tbody > tr:nth-child(even) > td{
+		background: $color-grey;
+	}
+}
+
+
+
+
+/**
+ * Budget table
+ */
+
+.docsflow-table-budget-item{
+	font-size: 14px;
+	td, th{
+		padding: 3px;
+		vertical-align: top;
+	}
+
+	th{
+		color: #666;
+		font-weight: normal;
+		width: 160px;
+		padding-left: 0;
+	}
+}
+
+	.docsflow-table-budget-single{
+		@include font-size($base-font-size, false);
+		font-size: 14px !important;
+		th{
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+	}
+
+
+/**
+ * Admin table
+ */
+
+.docsflow-table-admin{
+
+
+	thead{
+		th{
+			font-size: 18px;
+			font-weight: 600;
+			border-bottom: 1px $base-ui-color solid;
+			padding-left: 0;
+		}
+	}
+
+	tbody{
+		td{
+			padding-left: 0;
+			border-bottom: 1px $base-ui-color solid;
+		}
+	}
+
+	.cell-image{
+		width: 40px;
+	}
+
+	.cell-actions{
+		text-align: right;
+		white-space: nowrap;
+
+		> a{
+			margin: 0 0.5em;
+		}
+	}
+}

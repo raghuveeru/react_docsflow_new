@@ -1,0 +1,24 @@
+{
+	"data": [
+		{
+      "id": "1",
+			"name": "ISTD"
+		},
+		{
+      "id": "2",
+			"name": "FMMD"
+		},
+		{
+      "id": "3",
+			"name": "WPD"
+		},
+		{
+      "id": "4",
+			"name": "WPSD"
+		},
+		{
+      "id": "5",
+			"name": "HRD"
+		}
+	]
+}

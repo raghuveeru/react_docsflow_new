@@ -1,0 +1,14 @@
+{
+	"data": [
+		{
+			"name": "Lisa Lawrence",
+			"designation": "HOD",
+			"permissions": "HOD sourcing"
+		},
+		{
+			"name": "Christopher Brown",
+			"designation": "Executive",
+			"permissions": "Liason officer"
+		}
+	]
+}

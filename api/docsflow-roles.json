@@ -1,0 +1,114 @@
+{
+	"data": [
+		{
+      "id": "1",
+			"name": "Administrator",
+			"permissions": [{
+          "id": "1",
+          "name": "newworkflow"
+        },
+        {
+            "id": "2",
+            "name": "editworkflow"
+          },
+          {
+              "id": "3",
+              "name": "deleteworkflow"
+            },
+            {
+                "id": "4",
+                "name": "viewworkflow"
+              },
+              {
+                  "id": "5",
+                  "name": "approveworkflow"
+                },{
+                    "id": "6",
+                    "name": "rejectworkflow"
+                  },
+                  {
+                      "id": "7",
+                      "name": "revertworkflow"
+                    },
+                    {
+                        "id": "8",
+                        "name": "myinbox"
+                      },
+                      {
+                          "id": "9",
+                          "name": "allworklows"
+                        },
+                        {
+                            "id": "10",
+                            "name": "exporttoexcel"
+                          },
+                          {
+                              "id": "11",
+                              "name": "searchworkflow"
+                            },
+                            {
+                              "id": "12",
+                              "name": "administration"
+                            }
+      ]
+		},
+		{
+      "id": "2",
+			"name": "requestor",
+			"permissions": [{
+          "id": "1",
+          "name": "newworkflow"
+        },
+        {
+          "id": "2",
+          "name": "editworkflow"
+        },
+        {
+          "id": "3",
+          "name": "deleteworkflow"
+        },
+        {
+          "id": "4",
+          "name": "viewworkflow"
+        },
+        {
+          "id": "8",
+          "name": "myinbox"
+        },
+        {
+          "id": "11",
+          "name": "searchworkflow"
+        }
+      ]
+		},
+    {
+      "id": "3",
+			"name": "approver",
+			"permissions": [{
+        "id": "5",
+        "name": "approveworkflow"
+      },
+      {
+        "id": "4",
+        "name": "viewworkflow"
+      },
+      {
+        "id": "6",
+        "name": "rejectworkflow"
+      },
+      {
+        "id": "7",
+        "name": "revertworkflow"
+      },
+      {
+        "id": "8",
+        "name": "myinbox"
+      },
+      {
+        "id": "11",
+        "name": "searchworkflow"
+      }
+      ]
+    }    
+	]
+}

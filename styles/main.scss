@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    MAIN.CSS
+\*------------------------------------*/
+
+/**
+ * CSS Guidelines: https://github.com/csswizardry/CSS-Guidelines
+ * Naming Convention: https://github.com/csswizardry/CSS-Guidelines#naming-conventions
+ */
+
+/**
+ * Import Variables
+ */
+
+
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/debug";
+@import "base/normalize";
+@import "base/reset";
+@import "base/base";
+@import "base/helpers";
+
+/* Import sharepoint styles */
+
+@import "sharepoint/sp-reset";
+@import "sharepoint/sp-suite-bar";
+@import "sharepoint/sp-global-nav";
+
+/* Import icons */
+
+@import "typography/fonts";
+
+/* Responsive */
+
+@import "responsive/responsive";
+
+/* Elements */
+
+@import "elements/elements";
+
+/* Components */
+
+@import "components/components";
+
+/* Typography */
+
+@import "typography/typography";
+
+/* Views */
+
+@import "views/events";
+@import "views/work-apps";

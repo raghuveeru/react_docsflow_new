@@ -1,0 +1,424 @@
+/**
+ * Form wrapper
+ */
+
+.form-material{
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    padding: 16px;
+
+    @include media(tablet){
+        padding: 20px;
+    }
+}
+
+/**
+ * Forms
+ */
+$grey: #777;
+$border: #D6DBE5;
+$border-focus: #B25A00;
+$label-focus: #B25A00;
+
+%input-control{
+    border-style: solid;
+    border: none;
+    border-bottom: 1px $border solid;
+    padding: 0.5em 1em 0.5em 0;
+    width: 100%;
+    border-radius: 0;
+    transition: border 0.2s ease-in;
+    box-sizing: border-box;
+
+
+
+    &:focus{
+        outline: none;
+        box-shadow: none;
+        border-color: $border-focus;
+        //border-bottom-width: 2px;
+        //margin-bottom: -1px;
+    }
+}
+
+    .input-control{
+        @extend %input-control;
+        background: transparent;
+        z-index: 1;
+        position: relative;
+
+        &[disabled]{
+            border-bottom-style: dotted;
+            background: transparent;
+
+        }
+    }
+
+    /**
+     * Placeholder
+     */
+
+    .input-control::-webkit-input-placeholder {
+       color: $grey;
+       opacity: 0.5;
+    }
+
+    /**
+     * Form control
+     */
+
+    .docflow-form-control{
+        position: relative;
+        margin-top: 2em;
+
+        .date-field{
+            margin-bottom: 0;
+        }
+
+        h2 + &{
+            margin-top: 0;
+        }
+        &.form-indent {
+            margin: 1em 20px;
+        }
+        &.form-max400 {
+            max-width: 400px;
+        }
+
+
+        textarea{
+            margin-bottom: 0;
+        }
+    }
+
+    .docsflow-table {
+        .docflow-form-control { margin-top: 0; }
+    }
+
+    /* Default  label */
+
+    .label-group{
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+
+    /**
+     * Label
+     */
+    .label-control{
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        color: $grey;
+        transition: all 0.4s cubic-bezier(.55,0,.1,1);
+        margin: 0;
+        transform-origin: 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    .label-small{
+        color: $grey;
+        font-size: 12px;
+    }
+
+    .label-stub{
+        position: absolute;
+        right: 0;
+        top: 6px;
+        color: $grey;
+    }
+
+
+
+    .label-active{
+
+        .label-control{
+            transform: translateY(-1.3em) scale(0.7);
+            color: $grey;
+            width: 140%;
+        }
+    }
+
+    .label-up{
+
+        .label-control{
+            transform: translateY(-1.3em) scale(0.7);
+            color: $label-focus;
+            width: 140%;
+        }
+    }
+
+    /**
+     * Has Value
+     */
+
+    .has-value{
+        .label-control{
+            transform: translateY(-1.3em) scale(0.7);
+            color: $grey;
+        }
+    }
+
+    /**
+     * For older browsers
+     */
+
+    .no-csstransforms{
+
+        .label-up{
+            .label-control{
+                font-size: 12px;
+                color: $label-focus;
+                top: -1.3em;
+            }
+        }
+
+        .label-blur{
+            .label-control{
+                color: $grey;
+            }
+        }
+    }
+
+    .label-blur{
+        .label-control{
+            color: $grey;
+        }
+    }
+
+    /**
+     * Material combo
+     */
+
+    .combo-material{
+        border: none;
+
+        &.combo-focus{
+            box-shadow: none;
+        }
+
+        .text-input{
+            @extend %input-control;
+
+            &[disabled]{
+                background: transparent;
+                border-bottom-style: dotted;
+            }
+        }
+
+        /* Dropdown */
+
+        .combo-dropdown{
+            border-radius: 0;
+            z-index: 2;
+            //border-color: $grey;
+            border: none;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        }
+
+        .combo-arrow{
+            width: 20px;
+        }
+
+        .combo-arrow:before{
+            line-height: 40px;
+
+            content: " ";
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #666;
+            display: block;
+            width: 0;
+            height: 0;
+            top: 0;
+            right: 5px;
+            bottom: 0;
+            position: absolute;
+            margin: auto 0;
+        }
+
+        &.combo-open .combo-arrow:before{
+             border-top: none;
+            border-bottom: 5px solid #666;
+        }
+    }
+
+    /**
+     * 2x
+     */
+
+    .combo-2x{
+        max-width: 200px;
+    }
+
+    .combo-full{
+        max-width: 100%;
+    }
+
+
+        /* Placeholder */
+
+        .combo-material .text-input::-webkit-input-placeholder{
+            color: $grey;
+        }
+
+
+    /**
+     * Input 1x
+     */
+
+    .input-2x{
+        width: 340px;
+        max-width: 100%;
+    }
+
+/**
+ * Form submit
+ */
+
+.form-submit{
+    padding-top: 2em;
+    padding-bottom: 1em;
+    @include clearfix;
+
+    .docsflow-btn{
+        margin-right: 1em;
+    }
+}
+
+
+
+/**
+ * Form submission
+ */
+
+.form-submit{
+    @include rem(padding-bottom, 1);
+}
+
+    /**
+     * Right align
+     */
+
+    .form-submit-right{
+
+        @include media(tablet){
+            float: right;
+        }
+    }
+
+/**
+ * Form section
+ */
+
+.form-section{
+    padding-bottom: 2em;
+}
+
+
+/**
+ * Inline control
+ */
+
+.control-material-inline{
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+
+    label.control-material-inline{
+        @include media(tablet){
+            margin-top: 2.5em;
+        }
+    }
+
+
+/**
+ * Upload
+ */
+
+.docflow-form-control-upload{
+    background-color: #F6F6F6;
+    border: 1px #D8D8D8 solid;
+    border-radius: $base-radius;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-top: 0;
+    position: relative;
+    padding-left: 84px;
+
+    .icon{
+        font-size: 44px;
+        position: absolute;
+        left: 16px;
+        top: 16px;
+    }
+
+    p{
+        margin-bottom: 5px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/**
+ * Divider text
+ */
+
+.text-divider{
+
+    padding: 10px 0;
+    margin-top: 2em;
+
+    @include media(tablet){
+        text-align: center;
+        position: relative;
+        top: 10px;
+    }
+}
+
+.time-period {
+    margin-top: 2em;
+}
+
+
+
+/**
+ * Declarations
+ */
+
+.docflow-form-control-declaration{
+    padding: 1.5em;
+    padding-left: 0;
+    border-top: 5px $base-color solid;
+}
+
+
+
+
+/**
+ * Submit control
+ */
+
+.docsflow-submit-control{
+
+    .docsflow-btn{
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Select 2 wide
+ */
+
+.select2-wide{
+    width: 270px;
+}

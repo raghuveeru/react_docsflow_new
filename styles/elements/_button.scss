@@ -1,0 +1,234 @@
+/*------------------------------------*\
+    BUTTONS
+\*------------------------------------*/
+
+
+.docsflow-btn{
+	display:inline-block;       /* [1] */
+	vertical-align:middle;      /* [2] */
+	white-space:nowrap;         /* [3] */
+	font-family:inherit;        /* [4] */
+	font-size:100%;             /* [4] */
+	cursor:pointer;             /* [5] */
+	border:none;                /* [6] */
+	margin:0;                   /* [6] */	
+	padding: $button-padding;
+	border-radius: 3px; /* [8] */
+    @include rem(margin-bottom);        
+    font-weight: normal;
+    transition: background 0.1s ease-in;
+    letter-spacing: 1px;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    
+    /* Font size */
+
+    //@include font-size(14px, false);
+    letter-spacing: 0;
+    
+
+    &, &:hover, &:active{
+        
+    }
+
+    /**
+     * Icon inside buttons
+     */
+    
+    .fa{
+        //font-size: 16px;        
+    }
+
+     + .docsflow-btn{
+        margin-left: 10px;
+     }
+   
+}
+
+   
+
+
+/**
+ * Hover, Active and focus
+ */
+
+.docsflow-btn{
+
+    &,
+    &:hover{
+        text-decoration:none;   /* [9] */
+    }
+
+    &:active,
+    &:focus{
+        //outline:none;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+/**
+ * Button style modifiers.
+ *
+ * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
+ */
+.docsflow-btn--soft{
+    border-radius:200px;        /* [1] */
+}
+
+.docsflow-btn--hard{
+    border-radius:0;
+}
+
+
+.docsflow-btn--full{
+    display: block;
+    text-align: center;
+}
+
+/**
+ * Unstyled button
+ */
+
+.docsflow-btn--unstyled{
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    color: $base-color;
+
+    .fa{
+        margin: 0;
+    }
+}
+
+    /**
+     * Stub
+     */
+    
+    .docsflow-btn--stub{
+        background: none;
+        @include rem(margin-bottom, 0.5);
+
+        .fa{
+            vertical-align: middle;
+        }
+    }
+
+
+    /**
+     * Search button
+     */
+    
+    .docsflow-btn-search{
+        @extend %docsflow-btn-search;
+    }
+
+
+/**
+ * button primary
+ */
+
+.docsflow-btn-primary{
+    background: $button-primary-color;
+    border: 1px #D6721D solid;
+    color: $base-color;
+    font-weight: 600;
+
+    &, &:hover, &:visited{
+        color: $base-color;
+    }
+
+    &:hover{
+        background-color: darken($button-primary-color, 10%);        
+    }
+
+    &:active, .dropdown-active &{
+        background-color: darken($button-primary-color, 20%);
+        color: $base-color;
+    }
+}
+
+/**
+ * button sec
+ */
+
+.docsflow-btn-secondary{
+    background: #CAD2D6;
+    border: 1px #9EA4A7 solid;
+    color: $base-color;
+    font-weight: 600;
+
+    &, &:hover, &:visited{
+        color: $base-color;
+    }
+
+    &:hover{
+        background-color: darken(#CAD2D6, 10%);        
+    }
+
+    &:active, .dropdown-active &{
+        background-color: darken(#CAD2D6, 20%);
+        color: $base-color;
+    }
+}
+
+
+/**
+ * Follow
+ */
+
+%docsflow-btn-small{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.docsflow-btn-small{
+    @include rem(margin-bottom, 0.5);
+    @extend %docsflow-btn-small;
+}
+
+
+.docsflow-btn-follow, .docsflow-btn-follow{
+    @extend .docsflow-btn-primary;
+    @extend .docsflow-btn-small;
+    @extend .docsflow-btn--full;
+    font-weight: normal;
+    padding: 5px 10px;
+
+    .media-item &{
+        margin-top: 1em;
+    }
+
+    &:before{
+        @extend %icon;
+        content: "\f006";
+    }
+}
+
+    /**
+     * Unfollow
+     */
+    
+    .docsflow-btn-unfollow{
+        &:before{
+            content: "\f005";
+        }
+    }
+
+
+
+/**
+ * Right buttons
+ */
+
+.docsflow-btn-right{
+    float: right;
+    margin-left: 0.3em;
+}

@@ -1,0 +1,456 @@
+/*------------------------------------*\
+    META
+\*------------------------------------*/
+
+
+
+/**
+ * Meta
+ */
+
+.sp-meta{
+    font-size: 14px;
+    color: #999;
+    padding-bottom: 5px;
+
+    .sp-listing &{
+        font-size: 13px;
+    }
+
+    a{
+        @include link-colors(#999,#999,#999);
+    }
+
+    > span, > a{
+        margin-right: 1em;
+    }
+
+    /* Icon */
+
+    .fa{
+        @extend .fa-fw;
+    }
+
+
+    /* Adjacent */
+
+    h1 + &{
+        @include rem(padding-bottom);
+        padding-top: 0;
+    }
+
+    /* User image */
+
+    img{
+        max-width: 30px;
+        vertical-align: middle;
+        margin-right: 1em;
+        display: inline-block;
+    }
+
+
+    /**
+     * Dropdown
+     */
+    
+    .dropdown {
+
+        a{
+            color: $base-color;
+        }
+
+        a:hover, a:focus{
+            color: #fff;
+        }
+    }
+}
+
+.meta-user, .meta-calendar, .meta-location, .meta-users, .meta-star, .meta-home{
+
+    &:before{
+        font-family: "FontAwesome";
+        margin-right: 0.3em;
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+
+
+
+/**
+ * Highlight meta
+ * Only used
+ */
+.meta-hilite{
+    font-size: 14px;
+    color: $base-color;
+    //font-weight: 600;
+    padding: 5px 0;
+
+    a{
+        @include link-colors($base-color, $base-color, $base-color);
+    }
+
+    a, span{
+        display: block;
+        
+    }
+}
+
+/**
+ * Meta events
+ */
+
+.meta-events{
+    a, span{
+        position: relative;
+        padding-left: 24px;
+        display: block;
+    }
+
+    .fa{
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+}
+
+/**
+ * Item tag
+ */
+
+.sp-tag{
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    border-radius: $base-radius;
+    font-weight: 600;
+    padding: 5px 0 0 0;
+    line-height: 1;
+    margin-bottom: 8px;
+    font-style: normal;
+    white-space: nowrap;
+
+    &, &:visited, &:hover{
+        color: $color-brand;
+    }
+}
+
+    /* announcement */
+
+    .sp-tag-announcement{
+        border-color: $color-theme-red;
+
+        &, &:hover, &:visited{
+            color: $color-theme-red;
+        }
+    }
+
+    /* momerang */
+
+    .sp-tag-momerang{
+        border-color: $color-theme-green;
+
+        &, &:hover, &:visited{
+            color: $color-theme-green;
+        }
+    }
+
+    .sp-tag-momentum{
+        border-color: $color-theme-pink;
+
+        &, &:hover, &:visited{
+            color: $color-theme-pink;
+        }
+    }
+
+    .sp-tag-survey{
+        border-color: $color-theme-purple;
+
+        &, &:hover, &:visited{
+            color: $color-theme-purple;
+        }
+    }
+
+    .sp-tag-event{
+        border-color: darken($color-theme-orange, 5%);
+
+        &, &:hover, &:visited{
+            color: darken($color-theme-orange, 15%);
+        }
+    }
+
+    .sp-tag-gallery{
+        border-color: $color-theme-forest;
+
+        &, &:hover, &:visited{
+            color: $color-theme-forest;
+        }
+    }
+
+    .sp-tag-media-report{
+        border-color: $color-theme-blue;
+
+        &, &:hover, &:visited{
+            color: $color-theme-blue;
+        }
+    }
+
+    // .sp-tag-press{
+    //     border-color: #0092A5;
+
+    //     &, &:hover, &:visited{
+    //         color: #0092A5;
+    //     }
+    // }
+
+
+/**
+ * Views
+ */
+
+.sp-views{
+    &:before{
+        @extend %icon;
+        content: "\f06e";
+    }
+}
+
+.sp-survey-submissions{
+    &:before{
+        @extend %icon;
+        content: "\f046";
+    }
+}
+
+.survey-end-date{
+    font-size: 14px;
+    &::before{
+        @extend %icon;
+        content: "\f073";
+    }
+    p { display: inline-block; }
+}
+
+
+/**
+ * More items
+ */
+
+.item-more{
+    @include rem(margin-top, 1.5);
+    clear: both;
+
+    .docsflow-btn{
+        //@include rem(margin-bottom, 0.25);
+    }
+}
+
+
+/**
+ * Item date
+ */
+
+.item-date{
+    background: #1E97F9;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 200;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
+    padding: 12px 0 8px 0;
+    position: relative;
+
+    &:after, &:before{
+        content: " ";
+        position: absolute;
+        top: 6px;
+        left: 12px;
+        width: 4px;
+        height: 4px;
+        background: #06599C;
+    }
+
+    &:before{
+        left: 24px;
+    }
+}
+
+
+
+
+
+/**
+ * User image
+ */
+
+ .img-user{
+
+    display: inline-block;
+
+
+    .media-item &{
+        margin-right: 0;
+    }
+}
+
+
+
+/**
+ * Date
+ */
+
+.card-date{
+    background: $color-brand;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+    padding: 8px;
+    width: 60px;
+
+    span{
+        display: block;
+        font-size: 38px;
+    }
+}
+
+    /**
+     * Small date
+     */
+
+    .card-date-small{
+        padding: 5px;
+        font-size: 14px;
+
+        span{
+            font-size: 30px;
+        }
+    }
+
+
+
+/**
+ * Item meta author
+ */
+
+.sp-meta-author{
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    display: block;
+
+    > a, > span{
+        margin: 0 0.5em;
+        margin: 0;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        position: relative;
+    }
+
+    a, span{
+        &:after{
+            content: "\2022";
+            position: absolute;
+            right: -4px;
+            top: -1px;
+        }
+    }
+
+    .meta-author{
+        padding-left: 0;
+        &:before{
+            content: "";
+        }
+    }
+
+    a:last-child, span:last-child{
+        //padding-left: 0;
+        &:after{
+            content: "";
+        }
+    }
+
+    .sp-tag{
+        margin-right: 0.8em;
+    }
+}
+
+
+
+
+/**
+ * Meta apps
+ */
+
+.sp-meta-apps{
+    font-size: 14px;
+
+    .sp-listing &{
+        font-size: 14px;
+    }
+
+    a{
+        @include link-colors($base-color, $base-color, $base-color);
+    }
+}
+
+
+
+/**
+ * Link bookmark
+ */
+
+.link-bookmark{
+    position: absolute;
+    right: 0.5em;
+    top: 0;
+    font-size: 18px;
+
+
+    &:before{
+        @extend %icon;
+        content: "\f097";
+        color: #777;
+        margin: 0;
+        vertical-align: top;
+        margin-top: -6px;
+    }
+
+
+    &:hover:before{
+        color: $color-brand;
+    }
+
+
+    .item-bookmarked &{
+        &:before{
+            content: "\f02e";
+            color: $color-brand;
+        }
+    }
+}
+
+    /**
+     * Inside article
+     */
+    
+    .sp-article{
+
+        .link-bookmark{
+            display: none;
+        }
+
+        &:hover .link-bookmark{
+            display: block;
+        }
+
+        &.item-bookmarked .link-bookmark{
+            display: block;
+        }
+    }

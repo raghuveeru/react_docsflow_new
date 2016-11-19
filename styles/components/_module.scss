@@ -1,0 +1,227 @@
+/*------------------------------------*\
+    MODULE
+\*------------------------------------*/
+
+.sp-module{
+    //background: #fff;
+    //box-shadow: $base-box-shadow;
+    margin-bottom: 15px;
+    @include media(tablet){
+        @include rem(margin-bottom);
+    }
+}
+
+
+
+/**
+ * Module title
+ */
+
+.sp-module-title{
+    @include font-size(15px, false) !important;
+    margin-bottom: 12px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+}
+
+
+
+/**
+ * Module content
+ */
+
+.sp-module-content{
+    padding-top: 0.5em;
+    //padding: 15px 10px 10px 10px;
+    //background: #fff;
+    //border: 1px $base-ui-color solid;
+}
+
+
+/**
+ * Section next
+ */
+
+.section-next{
+    text-align: right;
+    border-top: 4px #D8D8D8 solid;
+    padding-top: 0.5em;
+    position: relative;
+
+    .next-title{
+        text-transform: uppercase;
+    }
+
+    a{
+        font-weight: 600;
+        &:after{
+            @extend %icon;
+            content: "\f054";
+            margin-right: 0;
+            margin-left: 0.3em;
+            vertical-align: middle;
+        }
+
+    }
+}
+
+
+
+/**
+ * Feedback
+ */
+
+.module-feedback{
+
+    position: fixed;
+    display: none;
+
+    @include media(tablet){
+        display: block;
+    }
+    right: 0;
+    top: 50%;
+    margin-top: -140px;
+    width: 400px;
+
+    height: 280px;
+    z-index: 3;
+    right: -400px;
+    transition: right 0.2s ease-in;
+
+    .feedback-open &{
+        right: 00px;
+    }
+}
+
+    .link-feedback{
+        background: url(../images/feedback-button.png) top left no-repeat;
+        width: 27px;
+        height: 129px;
+        text-indent: -2000em;
+        display: block;
+        position: absolute;
+        left: -27px;
+        top: 50%;
+        margin-top: -65px;
+    }
+
+    .feedback-form{
+        background: #fff;
+        padding: 1em;
+        //border: 1px $base-ui-color solid;
+        height: 240px;
+
+        .feedback-open &{
+            box-shadow: 0 1px 4px 0px rgba(0,0,0,0.3);
+        }
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        .required{
+            color: red;
+        }
+
+        .docsflow-btn{
+            margin-right: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        textarea{
+            width: 340px;
+        }
+    }
+
+
+
+
+/**
+ * Module tab
+ */
+
+.sp-module-tab{
+    padding-bottom: 1em;
+
+    a{
+        border-left: 1px $base-color solid;
+        line-height: 18px;
+        display: inline-block;
+        @include link-colors($color-brand, $color-brand, $color-brand);
+
+        padding-left: 0.5em;
+        margin-left: 0.5em;
+
+        &:first-child{
+            border-left: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+
+    .active{
+        color: $base-color;
+    }
+}
+
+
+
+/**
+ * Image gallery
+ */
+
+.gallery-preview{
+
+    margin-bottom: 1em;
+    position: relative;
+    display: inline-block;
+
+    img{
+        vertical-align: bottom;
+        width: 100%;
+    }
+
+    .preview-more{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url(../images/banner-gradient.png) bottom repeat-x;
+        color: #fff;
+        padding: 3px 10px;
+        height: 30px;
+        line-height: 30px;
+        width: auto;
+        // top: 50%;
+        // margin-top: -15px;
+    }
+
+    &:hover .preview-more{
+        background-color: #000;
+    }
+}
+
+    /* Preview more */
+
+    .preview-more{
+        display: block;
+        text-align: center;
+        line-height: 1.4;
+
+        &, &:hover{
+            text-decoration: none;
+        }
+
+
+    }
+
+
+/**
+ * Banner module
+ */
+
+.sp-module-banner{
+    background: #fff;
+    padding: 1em;
+    box-shadow: $base-box-shadow;
+}

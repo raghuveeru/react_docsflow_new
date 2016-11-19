@@ -1,0 +1,231 @@
+/**
+ * Credits: http://responsivesharepoint.codeplex.com/releases/view/112845
+ */
+
+/*border-box causes many issues with SP*/
+*, *:before, *:after {
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+/*reset elements that B3 is expecting to be border-box*/
+* .columns, * .columns:before, * .columns:after,
+.docsflow-container, .docsflow-container:before, .docsflow-container:after,
+.row, .row:before, .row:after,
+legend, fieldset, code, pre
+, .text-input
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    max-width: none;
+    width: auto;
+}
+* .columns img {
+    max-width: 100%; /*for images inside span grid*/
+}
+#scriptWPQ2 img, img.ms-webpart-menuArrowImg, #applist img, .ms-core-menu-icon > img {
+    width: auto; /*within a span may still need to have width of image not 100% for SP2013 OOTB features/imges*/
+    max-width: none;
+}
+.ms-siteactions-imgspan {
+    float: none;
+    margin: 0px;
+}
+input.ms-cui-cb-input {
+    height: 14px;
+    padding: 3px 7px 2px;
+}
+select, input[type="file"] {
+    height: auto;
+    line-height: 20px;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+a:focus { 
+    //outline: none; 
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+/*end bootstrap resets*/
+
+/*SharePoint overrides some B3 classes, reset back*/
+.docsflow-container {
+    background-color: transparent;
+    border: 1px transparent none;
+    color: inherit;
+    margin: 0px auto;
+    //width: auto;
+}
+/*end SP resets*/
+
+/*template styles*/
+/*Main SP containers*/
+/*end Main SP containers*/
+#s4-bodyContainer {
+    width: auto !important;
+}
+/* ribbon*/ 
+#suiteBar {
+    display: block;
+    height: 60px;
+}
+#suiteBarLeft, #suiteBarRight {
+    display: inline-block;
+    width: 100%;
+}
+#suiteBarRight .ms-core-deltaSuiteBarRight {
+    float: right;
+}
+#s4-ribbonrow [class*="col-"] {
+    float: none;
+    margin-left: 0px;
+}
+#pageStatusBar[class], .ms-status-msg {
+    margin-bottom: 0px;
+}
+#suiteBarLeft {
+    background-color: #0088CC;
+}
+.ms-cui-dd-text, input.ms-cui-cb-input, input[type="text"].ms-cui-cb-input {
+    border-color: #D3D6D9;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    cursor: default;
+    display: block;
+    height: 14px;
+    padding: 3px 7px 2px;
+    white-space: nowrap;
+    font-size: inherit;
+}
+/*header*/
+#pageTitle {
+    /*margin: 0px 0px 5px;
+    font-size: 2em;*/
+}
+/*end header*/
+
+
+
+/*on mobile devices top nav bar will be a drop down, so we want to show across*/
+.ms-core-listMenu-horizontalBox {
+    display: block;
+}
+
+.ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {
+    border: none;
+}
+
+/* main content areas */
+div.docsflow-table { 
+    margin: 0px; /*added by design manager admin page, ruins rd layout*/
+}
+.col-md-9 .ms-table {
+    display: inherit;
+}
+.col-md-9 .docsflow-tableCol-75 {
+    display: inherit;
+}
+#ms-core-tableNoSpace {
+    display: block;
+}
+
+/*site settings*/
+/*Settings page - Add app page*/
+#idStorefrontManagementLeftNavBar.ms-core-sideNavBox-removeLeftMargin {
+    margin-left: 0;
+}
+a.ms-storefront-selectanchor, a.ms-storefront-selectanchor:link, a.ms-storefront-selectanchor:visited {
+    clear: both;
+    width: auto;
+}
+/*end site settings*/
+
+/*web part zones*/
+* .columns .ms-webpart-zone, * .columns .ms-webpart-cell-vertical, * .columns .ms-webpart-chrome-vertical {
+    display: block; /*forces zone to stay within confines of responsive zone*/
+}
+* .columns .ms-WPBody > table, * .columns .ms-WPBody > table > tbody, * .columns .ms-WPBody > table > tbody > tr, * .columns .ms-WPBody > table > tbody > tr > td {
+    display: block;
+    width: 100%;
+}
+* .columns .ms-WPBody > table img {
+    width: 100%; /*reset back to bootstrap for web part images*/
+}
+.ms-SPZone.ms-webpart-zone {
+    padding: 5px;
+}
+.ms-SPZone > .s4-wpcell, .ms-SPZone > .s4-wpcell-plain, .ms-rtestate-write > .ms-rte-wpbox > div > .s4-wpcell, .ms-rtestate-write > .ms-rte-wpbox > div > .s4-wpcell-plain {
+    padding: 5px 5px 10px;
+}
+/*web part properties*/
+/*edit mode table fixes*/
+#MSOTlPn_WebPartPageDiv > tbody > tr > td:first-child {
+    padding-right: 10px; /*without the padding the left column overflows over the webpart properties toolpane*/
+}
+/*end edit mode table fixes*/
+
+.ms-ToolPaneBody select, .ms-ToolPaneBody textarea, .ms-ToolPaneBody input[type="text"], .ms-ToolPaneBody input[type="password"], .ms-ToolPaneBody input[type="datetime"], .ms-ToolPaneBody input[type="datetime-local"], .ms-ToolPaneBody input[type="date"], .ms-ToolPaneBody input[type="month"], .ms-ToolPaneBody input[type="time"], .ms-ToolPaneBody input[type="week"], .ms-ToolPaneBody input[type="number"], .ms-ToolPaneBody input[type="email"], .ms-ToolPaneBody input[type="url"], .ms-ToolPaneBody input[type="search"], .ms-ToolPaneBody input[type="tel"], .ms-ToolPaneBody input[type="color"], .ms-ToolPaneBody .uneditable-input {
+    margin-bottom: 0px;
+    width: auto;
+    height: auto;
+    line-height: 20px;
+}
+.ms-ToolPaneBody label {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+/*end web part properties*/
+
+/* end main content areas */
+
+/*Fullscreen*/
+.ms-fullscreenmode #mainbody, .b3-fullscreenmode #mainbody {
+    margin-left: 0px;
+    width: 100%;
+}
+.ms-fullscreenmode #sideNavBox, .b3-fullscreenmode #sideNavBox {
+    display: none;
+}
+/*end template styles */
+
+/*responsive*/
+@media (min-width: 768px) {
+    /*fix ribbon back to normal*/
+    #suiteBar {
+        display: table-row;
+        height: 30px;
+    }
+    #suiteBarLeft, #suiteBarRight {
+        display: table-cell;
+        width: 100%;
+    }
+    #suiteBarRight {
+        width: auto;
+    }
+    #suiteBarRight .ms-core-deltaSuiteBarRight {
+        float: none;
+    }
+    /*end ribbon*/
+    
+    
+    /*left nav */
+    #sideNavBox {
+        float: none;
+        margin: 0px;
+        width: auto;
+    }
+    #sideNavBox.col-md-3 {
+        float: left;
+        width: 25%;
+    }
+    /*end left nav */
+}
+/*end responsive*/

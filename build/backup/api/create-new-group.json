@@ -1,0 +1,14 @@
+{
+	"data": [
+		{
+			"id": 5,
+			"name": "New group name",
+			"users": [
+				{
+                	"id": "DISCWK",
+                	"name": "EILEEN CHAN WHEE KHIM"
+            	}
+			]
+		}
+	]
+}

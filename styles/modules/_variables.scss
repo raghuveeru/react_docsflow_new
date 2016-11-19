@@ -1,0 +1,174 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+
+$debug-mode   : false;
+$fa-font-path : '../fonts/fontawesome';
+
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+
+$base-color       : #333;
+$base-font-family : 'Segoe UI', Helvetica, Arial, sans-serif;
+$base-font-size   : 16px;
+$base-line-height : 24px;
+$base-ui-color    : #e5e5e5;
+$base-light-color : #f1f1f1;
+$base-radius      : 4px;
+$base-box-shadow  : 0 1px 3px rgba(0,0,0,0.3);//0 0px 1px 1px rgba(0, 0, 0, 0.3);
+$base-box-shadow-2: 0 2px 6px rgba(0,0,0,0.3);
+$base-text-shadow : 0 1px 8px rgba(0, 0, 0, 0.5);
+$site-width       : 960px;
+
+$color-theme-red: #F36C60;
+$color-theme-orange: #FFAE6E;
+$color-theme-blue: #0699F9;
+$color-theme-green: #42BD41;
+$color-theme-pink: #D687C6;
+$color-theme-forest: #0092A5;
+$color-theme-purple: #7E57C2;
+
+/*------------------------------------*\
+    $COLOR SWATCHES
+\*------------------------------------*/
+
+$color-blue       : #0072c6;
+$color-brand      : #e3571a;
+$color-brand-dark : #611960;
+$color-grey       : #f7f7f7;
+$color-table : #D6DBE5;
+$color-table-border: darken($color-table, 10%);
+$color-dark-grey  : #ccc;
+$color-green      : #26ae6e;
+$color-yellow     : #f39f1b;
+$color-red        : #C1272D;
+$color-error      : $color-red;
+$color-title: #64635e;
+$color-turq: #009B9B;
+
+
+/*------------------------------------*\
+    $COLOR SWATCHES (SHAREPOINT)
+\*------------------------------------*/
+
+$suite-bar-background            : #a5dcfb;
+$suite-bar-color                 : #fff;
+$suite-bar-link-color            : #333;
+$suite-bar-link-hover-background : #333;
+
+$global-nav-background           : transparent;
+$global-nav-color                : #666;
+$global-nav-link-color           : #999;
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$heading-font        : 'Segoe UI', Helvetica, Arial, sans-serif;
+$heading-font-family : $heading-font;
+
+    /**
+     * Mobile Sizes
+     */
+
+    $h1-base-size : 32px;//.alpha
+    $h2-base-size : 28px;//.beta
+    $h3-base-size : 20px;//.gamma
+    $h4-base-size : 18px;//.delta
+    $h5-base-size : 18px;//.epsilon
+    $h6-base-size : 14px;//.zeta
+
+
+    /**
+     * Tablet
+     */
+
+    $h1-tablet-size: 38px;//.alpha
+    $h2-tablet-size: 36px;//.beta
+    $h3-tablet-size: 30px;//.gamma
+    $h4-tablet-size: 22px;//.delta
+    $h5-tablet-size: 18px;//.epsilon
+    $h6-tablet-size: 16px;//.zeta
+
+
+    /**
+     * Desktop font size
+     * Both tablets and desktops
+     */
+
+    $h1-desktop-size: 48px;
+    $h2-desktop-size: 36px;
+    $h3-desktop-size: 24px;
+    $h4-desktop-size: 20px;
+    $h5-desktop-size: 18px;
+    $h6-desktop-size: 16px;
+
+
+    /**
+     * Optional font sizes
+     */
+
+    $giga-size  : 96px;
+    $mega-size  : 72px;
+    $kilo-size  : 48px;
+    $milli-size : 14px;
+    $micro-size : 12px;
+
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+
+$link-color              : $color-brand;
+$link-hover-color        : $color-brand;
+$link-active-color       : $color-brand;
+$link-focus-color        : $color-brand;
+$link-visited-color      : $color-brand;
+$link-underline          : false !default;
+$link-underline-on-hover : true;
+
+/*------------------------------------*\
+    $FORM
+\*------------------------------------*/
+
+$input-padding        : 6px 0.6em;
+$button-padding       : 8px 1em;
+$input-border-color   : $color-dark-grey;
+$button-primary-color : #FF963D;
+
+/*------------------------------------*\
+    $GRID SETTINGS
+\*------------------------------------*/
+
+$grid-columns : 12;
+$grid-spacing : 30px;
+$site-width   : 960px;
+$max-width    : $site-width;
+
+
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+
+/* 0 - 480 (mobile), 480+ (medium), 600+ (tablet), 960+ (desktop), 1300+ (wide) */
+$screen: 'only screen';
+
+$breakpoints: (
+    mobile '#{$screen} and (max-width: 480px)',
+    small '#{$screen} and (min-width: 481px)',
+    medium '#{$screen} and (min-width: 600px)',
+    tablet '#{$screen} and (min-width: 768px)',
+    tablet-only '#{$screen} and (min-width: 600px) and (max-width: #{$site-width})',
+    desktop '#{$screen} and (min-width: #{$site-width})',
+    wide '#{$screen} and (min-width: 1200px)'
+);

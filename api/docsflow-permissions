@@ -1,0 +1,64 @@
+{
+	"data": [
+		{
+      "id": "1",
+			"name": "newworkflow",
+			"description": "create new workflow"
+		},
+		{
+      "id": "2",
+			"name": "editworkflow",
+			"description": "edit workflow"
+		},
+    {
+      "id": "3",
+			"name": "deleteworkflow",
+			"description": "delete workflow"
+		},
+    {
+      "id": "4",
+			"name": "viewworkflow",
+			"description": "view workflow"
+		},
+    {
+      "id": "5",
+			"name": "approveworkflow",
+			"description": "approve workflow"
+		},
+    {
+      "id": "6",
+			"name": "rejectworkflow",
+			"description": "reject workflow"
+		},
+    {
+      "id": "7",
+			"name": "revertworkflow",
+			"description": "revert workflow"
+		},
+    {
+      "id": "8",
+			"name": "myinbox",
+			"description": "view my inbox"
+		},
+    {
+      "id": "9",
+			"name": "allworklows",
+			"description": "view all workflow"
+		},
+    {
+      "id": "10",
+			"name": "exporttoexcel",
+			"description": "export to excel"
+		},
+    {
+      "id": "11",
+			"name": "searchworkflow",
+			"description": "search workflow"
+		},
+    {
+      "id": "12",
+			"name": "administration",
+			"description": "workflow app administration"
+		}
+	]
+}

@@ -1,0 +1,587 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "type": "budget_cuts",
+            "title": "Linking Skills/education with Ind Needs",
+            "summary": "Gist of cuts",
+            "status": "Cleared Response",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cistsc",
+                "name": "JACE TAN",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [],
+            "year": "2015",
+            "relationships": {
+                "id": 1,
+                "category": "Labour Market "
+            },
+            "userId": null,
+            "completedStatus": [
+                "Final Answer",
+                "Draft"
+            ]
+        },
+        {
+            "id": 21212,
+            "type": "budget_cuts",
+            "title": "Linking Skills/education with Ind Needs",
+            "summary": "Gist of cuts",
+            "status": "Cleared Response",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cistsc",
+                "name": "JACE TAN",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [],
+            "year": "2015",
+            "relationships": {
+                "id": 1,
+                "category": "Labour Market "
+            },
+            "userId": null,
+            "completedStatus": [
+                "Final Answer",
+                "Draft"
+            ]
+        },
+        {
+            "id": 6,
+            "type": "budget_cuts",
+            "title": "Employment of Women and Matured Workers",
+            "summary": "Gist of Cuts",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": null,
+                "name": null,
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [],
+            "year": "2015",
+            "relationships": {
+                "id": 1,
+                "category": "Labour Market "
+            },
+            "userId": "HQDSY",
+            "completedStatus": [
+                "Speech",
+                "Final Answer",
+                "Draft"
+            ]
+        },
+        {
+            "id": 7,
+            "type": "budget_cuts",
+            "title": "Employment of Women and Matured Workers",
+            "summary": "Gist of Cuts",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cisdrk",
+                "name": "DADI RAMA KRISHNA",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "year": "2015",
+            "relationships": {
+                "id": 1,
+                "category": "Labour Market "
+            },
+            "userId": "HQDSY",
+            "completedStatus": [
+                "completed",
+                "Approved",
+                "Pending",
+                "Draft"
+            ]
+        },
+        {
+            "id": 8,
+            "type": "budget_cuts",
+            "title": "Legislate Caregiver Leave",
+            "summary": "asdfasdf",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "year": "2015",
+            "relationships": {
+                "id": 3,
+                "category": "SkillFuture (directly related only)"
+            },
+            "userId": "cisdrk",
+            "completedStatus": [
+                "Completed",
+                "Rejected",
+                "Approved",
+                "Pending",
+                "Draft"
+            ]
+        },
+        {
+            "id": 5,
+            "type": "budget_cuts",
+            "title": "Skills upgrading and training for adults",
+            "summary": "dsfa",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "year": "2015",
+            "relationships": {
+                "id": 3,
+                "category": "SkillFuture (directly related only)"
+            },
+            "userId": "cisdrk",
+            "completedStatus": [
+                "Completed",
+                "Rejected",
+                "Approved",
+                "Pending",
+                "Draft"
+            ]
+        },
+        {
+            "id": 1,
+            "type": "budget_cuts",
+            "title": "Legislate Caregiver Leave",
+            "summary": "Test Cut",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "year": "2015",
+            "relationships": {
+                "id": 3,
+                "category": "SkillFuture (directly related only)"
+            },
+            "userId": "system",
+            "completedStatus": [
+                "Speech",
+                "Final Answer",
+                "Draft"
+            ]
+        },
+        {
+            "id": 10,
+            "type": "budget_cuts",
+            "title": "Legislate Caregiver Leave",
+            "summary": "gist",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "year": "2015",
+            "relationships": {
+                "id": 3,
+                "category": "SkillFuture (directly related only)"
+            },
+            "userId": "cismam",
+            "completedStatus": [
+                "Completed",
+                "Rejected",
+                "Approved",
+                "Pending",
+                "Draft"
+            ]
+        },
+        {
+            "id": 9,
+            "type": "budget_cuts",
+            "title": "Review of Workplace Safety & Health Laws",
+            "summary": "test gist",
+            "status": "Speech",
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "year": "2015",
+            "relationships": {
+                "id": 5,
+                "category": "Flexible and Progressive Workplaces"
+            },
+            "userId": "cismam",
+            "completedStatus": [
+                "Completed",
+                "Rejected",
+                "Approved",
+                "Pending",
+                "Draft"
+            ]
+        }
+    ],
+    "facets": {
+        "status": [
+            {
+                "name": "Draft",
+                "count": "0"
+            },
+            {
+                "name": "Pending",
+                "count": "0"
+            },
+            {
+                "name": "Approved",
+                "count": "0"
+            },
+            {
+                "name": "Rejected",
+                "count": "0"
+            },
+            {
+                "name": "Completed",
+                "count": "10"
+            }
+        ],
+        "topics": [
+            {
+                "id": "1",
+                "name": "Labour Market ",
+                "count": "4"
+            },
+            {
+                "id": "3",
+                "name": "SkillFuture (directly related only)",
+                "count": "5"
+            },
+            {
+                "id": "5",
+                "name": "Flexible and Progressive Workplaces",
+                "count": "1"
+            },
+            {
+                "id": "2",
+                "name": "Fair Consideration Framework(FCF) and Jobs Banks",
+                "count": "0"
+            },
+            {
+                "id": "4",
+                "name": "Low Wage Workers (LWWs)",
+                "count": "0"
+            },
+            {
+                "id": "6",
+                "name": "Foreign Workers Management",
+                "count": "0"
+            },
+            {
+                "id": "7",
+                "name": "Workplace Safety and Health (WSH)",
+                "count": "0"
+            },
+            {
+                "id": "8",
+                "name": "FDWs",
+                "count": "0"
+            },
+            {
+                "id": "9",
+                "name": "Foreign Workforce (FW) Policy ",
+                "count": "0"
+            },
+            {
+                "id": "11",
+                "name": "Older Workers/ Economically Inactives (VW)",
+                "count": "0"
+            },
+            {
+                "id": "10",
+                "name": "Retirement Adequacy",
+                "count": "0"
+            },
+            {
+                "id": "12",
+                "name": "PMEs (young / mature PMEs)",
+                "count": "0"
+            },
+            {
+                "id": "13",
+                "name": "CET",
+                "count": "0"
+            },
+            {
+                "id": "15",
+                "name": "Tripartism & Industrial Relations",
+                "count": "0"
+            },
+            {
+                "id": "16",
+                "name": "FWA & Leave for Caregivers",
+                "count": "0"
+            }
+        ],
+        "year": [
+            {
+                "name": "2015",
+                "count": "8"
+            },
+            {
+                "name": "2014",
+                "count": "1"
+            },
+            {
+                "name": "2013",
+                "count": "1"
+            }
+        ],
+        "hodSourcing": [
+            {
+                "id": "cisdrk",
+                "name": "DADI RAMA KRISHNA",
+                "count": "0"
+            },
+            {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "count": "10"
+            }
+        ],
+        "hodDrafting": [
+            {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "count": "5"
+            },
+            {
+                "id": "cisdrk",
+                "name": "DADI RAMA KRISHNA",
+                "count": "1"
+            },
+            {
+                "id": "HQDSY",
+                "name": "LIOW SOK YI",
+                "count": "0"
+            }
+        ]
+    },
+    "totalStatusCount": [
+        {
+            "name": "Draft",
+            "count": "0"
+        },
+        {
+            "name": "Pending",
+            "count": "0"
+        },
+        {
+            "name": "Approved",
+            "count": "0"
+        },
+        {
+            "name": "Rejected",
+            "count": "0"
+        },
+        {
+            "name": "Completed",
+            "count": "10"
+        }
+    ],
+    "totalCount": "10",
+    "totalUserCount": "1"
+}

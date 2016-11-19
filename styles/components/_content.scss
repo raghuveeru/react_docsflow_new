@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    CONTENT.CSS
+\*------------------------------------*/
+
+.main-content{    
+    padding: 20px 0 3em 0;
+}
+
+
+/**
+ * Sidebar
+ */
+
+.sp-sidebar{
+
+    @include media(medium){
+        @extend .columns;
+        width: gridCalc(4);
+    }
+
+    @include media(desktop){
+        width: gridCalc(3);
+    }
+}
+
+
+/**
+ * Content
+ */
+
+.docsflow-sp-content{
+    padding-bottom: 2em;
+    @include media(medium){
+        @extend .columns;
+        width: gridCalc(8);
+    }
+
+    @include media(desktop){
+        width: gridCalc(9);
+    }
+}
+
+/**
+ * Flip columns in mobile
+ */
+
+.flip-columns-in-mobile{
+
+    .sp-sidebar{
+        
+
+        @include media(medium){
+            position: relative;
+            left: gridCalc(8);    
+        }
+        @include media(desktop){            
+            left: gridCalc(9);
+        }
+    }
+
+    .docsflow-sp-content{
+        @include media(medium){
+            position: relative;
+            left: -(gridCalc(4));
+        }
+
+        @include media(desktop){            
+            left: -(gridCalc(3));
+        }
+    }
+}
+
+
+/**
+ * Collapsible content
+ */
+
+.is-mobile-collapsible{
+
+    display: none;
+    
+    &.is-expanded{
+
+        display: block;
+
+    }
+
+    @include media(medium){
+        display: block;
+    }
+}

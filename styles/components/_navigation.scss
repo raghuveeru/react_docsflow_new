@@ -1,0 +1,528 @@
+/*------------------------------------*\
+    NAVIGATION.CSS
+\*------------------------------------*/
+
+
+/**
+ * Nav secondary
+ */
+
+.nav-secondary{
+    a{
+        margin-right: 1em;
+    }
+}
+
+
+/**
+ * Nav sidemenu
+ */
+
+.nav-sidemenu{
+
+    @extend %card;
+
+    a{
+        @include link-colors($base-color, $base-color, $base-color);
+        cursor: pointer;
+    }
+
+    a{
+        display: block;
+        padding: 8px 10px;
+        border-top: 1px $base-ui-color solid;
+
+        /* Hover and focus */
+
+        &:hover, &:focus{
+            text-decoration: none;
+            background-color: #FF963D;
+        }
+
+        /* Active pseudo */
+
+        &.active{
+            background-color: #FF963D;
+        }
+
+        /* Active link */
+
+        &.active{
+            font-weight: 600;
+        }
+
+        &:first-child{
+            // border-top: none;
+        }
+    }
+
+
+    .count{
+        float: right;
+        color: #999;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+
+    .active .count{
+        color: #fff;
+    }
+
+    /* Show more */
+}
+
+    /** Show more */
+
+    .nav-show-more{
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 10px;
+        background: #fff;
+
+        &, &:hover, &:visited, .nav-sidemenu &{
+            color: $color-brand;
+        }
+
+        &:after{
+            @extend %icon;
+            content: "\f105";
+            margin-left: 0.5em;
+            font-size: 16px;
+        }
+    }
+
+    /* Large sidemenu */
+
+    .nav-sidemenu-large{
+        font-weight: 600;
+
+        a{
+            padding: 12px 10px;
+            padding-left: 24px;
+            position: relative;
+
+            &:before{
+                content: " ";
+                width: 8px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &.active{
+                background-color: #eee;
+            }
+        }
+    }
+
+
+/**
+ * Pagination
+ */
+
+.nav-pagination{
+    text-align: center;
+    font-weight: 600;
+    border-top: none;
+    padding: 0 10px;
+    border-top: 1px $base-ui-color solid;
+
+
+    a{
+        line-height: 50px;
+        padding: 0 3px;
+        color: $color-brand;
+        text-decoration: none;
+
+        @include media(medium){
+            padding: 0 5px;
+        }
+
+        &:hover, &.active{
+            color: $base-color;
+        }
+
+        &.disabled{
+            color: #999;
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+/**
+ * Nav crumbs
+ */
+
+.nav-crumb{
+
+    @include rem(padding-bottom, 0.5);
+    font-size: 14px;
+
+    a{
+        @include link-colors($color-brand, $color-brand, $color-brand);
+    }
+
+    .fa{
+        font-size: 16px;
+    }
+
+    a{
+        padding-right: 16px;
+        margin-right: 12px;
+        position: relative;
+
+        &:after{
+            content: "\f105";
+            font-size: 18px;
+            font-family: "FontAwesome";
+            position: absolute;
+            right: 0;
+            top: -3px;
+            color: #999;
+        }
+
+        &:last-child:after{
+            // content: "";
+        }
+    }
+}
+
+/**
+ * Page Titles + links..
+ */
+.page-title {
+    position: relative;
+    clear: both;
+    .lnk-add {
+        &:before {
+            content: "\f067";
+            font-size: 14px;
+            font-family: "FontAwesome";
+            position: absolute;
+            left: -16px;
+            top: 2px;
+        }
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        display: none;
+
+        @include media(tablet){
+            display: block;
+        }
+    }
+
+    img{
+        max-width: 100%;
+    }
+}
+
+
+/**
+ * Nav alpha
+ */
+
+.nav-alpha{
+    @include rem(padding-bottom, 0.5);
+    a{
+        padding: 0 5px;
+        color: $base-color;
+
+        &:hover{
+
+        }
+
+
+        &.active{
+            font-weight: 600;
+            color: $color-brand;
+        }
+    }
+}
+
+
+
+/**
+ * Nav filter bar
+ */
+
+.nav-filter-bar{
+    background: #fff;
+    padding-left: 10px;
+    @include font-size(14px, false);
+    border: 1px $base-ui-color solid;
+    border-bottom: none;
+    font-weight: 600;
+
+    a{
+        color: $color-brand;
+    }
+
+    a{
+        line-height: 42px;
+        padding: 0 15px;
+        display: inline-block;
+
+        &.active{
+            color: $base-color;
+        }
+    }
+
+
+}
+
+
+/**
+ * Nav list
+ */
+
+.nav-wrapper{
+    background: #333; //$color-turq;
+    min-height: 40px;
+    padding: 0 1em;
+
+    @include media(desktop){
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .docsflow-container{
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.nav-list{
+    list-style: none;
+    padding: 0 0 1em 0;
+    clear: both;
+    margin: 0 -1em;
+    padding-top: 40px;
+
+    @include font-size(15px, false);
+
+
+    .menu-open &{
+        display: block;
+    }
+
+    // @include media(desktop){
+        padding: 0;
+        white-space: nowrap;
+        // width: $site-width;
+        margin: 0 auto;
+        display: block;
+    // }
+
+    a{
+        @include link-colors(#fff, #fff, #fff);
+    }
+
+
+    ul a{
+        color: #fff;
+    }
+
+
+    > li{
+
+        margin: 0;
+
+        // @include media(desktop){
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+        // }
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        min-width: 160px;
+        max-width: 200px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        background: $color-brand;
+        box-shadow: 0 5px 6px rgba(0,0,0,0.3);
+        border-radius: 0 0 $base-radius $base-radius;
+
+        > li{
+            list-style: none;
+            margin: 0;
+            display: block;
+        }
+
+        > li > a{
+            display: block;
+            padding: 5px 12px;
+            font-weight: normal;
+        }
+
+        > li > a:hover{
+            background-color: darken($color-brand, 10%);
+        }
+
+        > li:last-child > a{
+            border-radius: 0 0 $base-radius $base-radius;
+        }
+    }
+
+    a{
+        padding: 8px 15px;
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+
+        // @include media(tablet){
+            padding: 8px 8px;
+        // }
+
+        // @include media(desktop){
+            padding: 9px 15px;
+            display: inline-block;
+            vertical-align: top;
+        // }
+    }
+
+    a:hover, .dropdown-active > a, a:active, a:focus , > li:hover > a, li.active > a, a.active{
+        background-color: $color-brand;
+        color: #fff;
+    }
+
+    .search{
+        float: right;
+        display: none;
+
+        @include media(desktop){
+            display: block;
+        }
+
+        .fa{
+            margin-left: 0.5em;
+            margin-right: 0;
+        }
+    }
+
+}
+
+
+/**
+ * Has dropdown
+ */
+
+.has-dropdown{
+
+    @include media(desktop){
+
+        /**
+         * Toggle link
+         */
+
+        > a{
+
+            &:after{
+                display: inline-block;
+                font-family: "FontAwesome";
+                content: "\f0d7";
+                margin-right: 0;
+                margin-left: 0.5em;
+                line-height: 1;
+            }
+
+            .dropdown-active &{
+                &:after{
+                    content: "\f0d8";
+                }
+            }
+        }
+
+
+        &:hover > ul{
+            display: block;
+        }
+    }
+}
+
+
+/**
+ * Menu toggle
+ */
+
+.toggle-menu{
+
+    @include media(desktop){
+        display: none;
+    }
+
+    &, &:visited{
+        color: #fff;
+    }
+
+    position: absolute;
+    left: 0em;
+    top: 0;
+    text-transform: uppercase;
+    line-height: 40px;
+
+    @include media(tablet){
+        left: 1em;
+    }
+
+    &:before{
+        display: inline-block;
+        font-family: "FontAwesome";
+        content: "\f0c9";
+        margin-right: 0.5em;
+    }
+
+
+    &.active:before{
+        content: "\f00d";
+    }
+}
+
+
+
+/**
+ * Toggle search
+ */
+
+/**
+ * Search
+ */
+
+.toggle-search{
+
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+
+    @include media(tablet){
+        right: 1em;
+    }
+
+
+    @include media(desktop){
+        display: none;
+    }
+
+    &, &:visited{
+        color: #fff;
+    }
+
+    .fa{
+        margin-left: 0.5em;
+        margin-right: 0;
+    }
+}

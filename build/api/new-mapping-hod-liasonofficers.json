@@ -1,0 +1,20 @@
+{
+	"data": [
+		{
+			"hod": {
+				"id": 2,
+				"name": "Name of a hod"
+			},
+			"liasonOfficers": [
+				{
+					"id": 2,
+					"name": "liasonOfficers Name 1"
+				},
+				{
+					"id": 3,
+					"name": "liasonOfficers Name 2"
+				}
+			]
+		}
+	]
+}

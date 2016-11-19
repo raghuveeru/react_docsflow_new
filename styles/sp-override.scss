@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    MAIN.CSS
+\*------------------------------------*/
+
+/**
+ * CSS Guidelines: https://github.com/csswizardry/CSS-Guidelines
+ * Naming Convention: https://github.com/csswizardry/CSS-Guidelines#naming-conventions
+ */
+
+/**
+ * Import Variables
+ */
+
+
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/debug";
+
+
+/**
+ * Main Content 
+ */
+
+.main-content{
+	@include headings(1,6){
+		font-weight: bold;
+		color: $base-color;
+	}
+
+
+	/**
+	 * Heading font sizes
+	 */
+
+	h1, .alpha{
+	    @include font-size($h1-base-size, false);        
+	}
+
+	h2, .beta{
+	    @include font-size($h2-base-size, false);    
+	}
+
+	h3, .gamma{
+	    @include font-size($h3-base-size, false);        
+	}
+
+	h4, .delta{
+	    @include font-size($h4-base-size, false);    
+	}
+
+	h5, .epsilon{
+	    @include font-size($h5-base-size, false);    
+	}
+
+	h6, .zeta{
+	    @include font-size($h6-base-size, false);    
+	}
+
+
+	/**
+	 * Heading margins
+	 */
+
+	h1{
+		@include rem(margin-bottom, 1);
+	    font-weight: 300;    
+	}  
+
+	h2{
+		@include rem(margin-bottom, 0.25);    
+	}
+
+	h3{
+		@include rem(margin-bottom, 0.25);	    
+	}
+
+	h4{
+	    @include rem(margin-bottom, 0.25);    
+	}
+
+	h5, h6{
+	    @include rem(margin-bottom, 0.25);
+	}
+
+
+	/* Tablet */
+
+	@include media(tablet){
+	    
+	    h1, .alpha{
+		    @include font-size($h1-tablet-size, false);        
+		}
+
+		h2, .beta{
+		    @include font-size($h2-tablet-size, false);    
+		}
+
+		h3, .gamma{
+		    @include font-size($h3-tablet-size, false);        
+		}
+
+		h4, .delta{
+		    @include font-size($h4-tablet-size, false);    
+		}
+
+		h5, .epsilon{
+		    @include font-size($h5-tablet-size, false);    
+		}
+
+		h6, .zeta{
+		    @include font-size($h6-tablet-size, false);    
+		}
+
+	}
+}

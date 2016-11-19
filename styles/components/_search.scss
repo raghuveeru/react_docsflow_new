@@ -1,0 +1,294 @@
+/*------------------------------------*\
+    SEARCH.CSS
+\*------------------------------------*/
+
+/**
+ * Collection search
+ */
+
+.sp-search-collection{
+    @include rem(margin-bottom);
+}
+
+
+/**
+ * Search form
+ */
+
+$color-input: #f5f1e7;
+.sp-search-form{
+    position: relative;    
+    color: $base-color;
+    padding: 1em 0;    
+    background: #fff;
+    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.2);
+    display: none;
+
+
+    @include media(medium){
+        float: none;    
+        width: auto;
+    }
+
+    @include media(tablet){
+        // width: 360px;
+        // float: right;
+        // margin-top: 30px;
+    }
+
+    @include media(desktop){
+        //width: 300px;                
+    }
+
+
+    .text-input{
+        margin-bottom: 0;
+        border-color: #174FA2; //$color-input;        
+        padding-top: 8px;
+        padding-bottom: 8px;
+        //min-height: 40px;
+
+        
+    }
+    
+    .docsflow-btn-search, .docsflow-btn-sp-caret{        
+        // position: absolute;
+        @extend .docsflow-btn--unstyled;
+        // right: 0;
+        // top: 0;
+        height: 100%;
+        width: 36px;        
+        font-size: 16px;            
+    }
+
+    .docsflow-btn-sp-caret{
+        right: 36px;
+    }
+
+    .fa{
+        margin: 0;
+    }
+}
+
+
+/**
+ * SP Caret
+ */
+
+.docsflow-btn-sp-caret{
+    @extend .docsflow-btn--unstyled;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    color: #999;
+    font-size: 16px;
+
+    .fa{
+        margin: 0;
+    }
+}
+
+
+/**
+ * Overlay
+ */
+
+.search-overlay{
+    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AAAAAMwA0QDNTiUx4gAAAABJRU5ErkJggg==');
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    display:none;
+    z-index:1;
+    -webkit-tap-highlight-color:transparent   
+}
+
+    .search-open .search-overlay{
+        display: block;
+    }
+
+    .search-open .sp-search-form{
+        // display: block;
+    }
+
+    .sp-suite-bar, .sp-masthead, .nav-wrapper, .sp-search-form{
+        // z-index: 2;
+        position: relative;
+    }
+
+    .sp-suite-bar{
+        // z-index: 4;
+    }
+
+    .nav-wrapper{
+        // z-index: 3;
+    }
+
+
+/**
+ * Zoning
+ */
+
+/**
+     * Search zoning
+     */
+    
+    .search-zone-select{
+        position: absolute;
+        left: 0;
+        top: 0px;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        background: transparent;
+        height: 45px;        
+        border-right: 1px $base-ui-color solid;
+        border-radius: 0;
+        opacity: 0;
+        min-width: 300px;
+        margin: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+
+    /* Zone select text */
+
+    .search-zone-text{
+        padding: 0 15px 0 15px;
+        margin: 0;
+        white-space: nowrap;
+        display: block;
+        color: $base-color;
+        padding-top: 10px;
+        //min-width: 127px;
+
+        &:after{
+            @extend %icon;
+            content: "\f107";
+            margin-left: 8px;
+            margin-right: 0;
+            // font-size: 10px;
+        }
+    
+    }
+
+
+    .search-zone-selection, .search-zone-query, .search-zone-submit{
+            display: table-cell;   
+            position: relative;      
+            vertical-align: top;   
+        }
+
+        .search-zone-selection{
+            // background: $color-light;
+            background: $base-light-color;
+            border-right: 1px $input-border-color solid;
+            font-size: 14px;
+            border-radius: 2px 0 0 2px;
+
+            display: none;
+            @include media(tablet){
+                display: table-cell;
+            }
+
+            &:hover{
+                // background-color: $color-light;
+            }
+        }
+
+
+        .search-zone-query{
+            width: 100%;
+        }
+
+        .search-zone-submit{
+            // border-left: 1px $input-border-color solid;
+            background: $color-brand;
+            vertical-align: middle;
+
+            .docsflow-btn-search{
+                color: #fff;
+                width: 60px;
+            }
+        }
+
+    /**
+     * Parent
+     */
+    
+    .search-zoning{
+        border: 2px #174FA2 solid;
+        border-radius: 4px;
+        display: table;        
+        width: 100%;
+        position: relative;
+
+        .text-input{
+            border: none;
+            border-radius: 0;
+            height: 40px;
+            -moz-box-sizing: border-box;
+        }
+    }
+
+/**
+ * Spinner
+ */
+
+.search-spinner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../images/spinner-white.gif) center center no-repeat;
+    width: 40px;
+    height: 40px;
+    display: block;
+    z-index: 1;
+}
+
+/**
+ * Search clear
+ */
+
+.search-clear{
+    position: absolute;
+    color: #999;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    z-index: 2;
+    font-size: 20px;
+    line-height: 40px;
+    &:before{
+        @extend %icon;
+        content: "\f00d";
+    }
+}
+
+
+/**
+ * View all
+ */
+
+.docsflow-btn-search-viewall{
+    display: block;
+    //font-weight: 600;
+    @extend .link-more;
+    text-align: center;
+    margin: -1px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.search-zone-wrapper{
+    position: relative;
+}
+
+

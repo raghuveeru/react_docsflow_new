@@ -1,0 +1,18 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"name": "Group 1 - Edited",
+			"users": [
+				{
+                	"id": "DISCWK",
+                	"name": "EILEEN CHAN WHEE KHIM"
+            	},
+                {
+                    "id": "DISCWK2",
+                    "name": "2EILEEN CHAN WHEE KHIM"
+                }
+			]
+		}
+	]
+}

@@ -1,0 +1,59 @@
+.my-favourites {
+    background: #f6f6f6;
+    padding: 20px;
+}
+
+.favourite-apps-title {
+    &::before {
+        content: "\f004";
+        font-size: 22px;
+        font-family: "FontAwesome";
+        // position: absolute;
+        // left: 0px;
+        // top: 0px;
+        margin-right: 10px;
+        color: $color-brand;
+    }
+}
+
+#work-directory {
+    @include media(tablet) {
+        .columns:last-child {
+            border-left: 1px solid #ccc;
+        }
+    }
+    .app-item {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .favourite {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: none;
+        
+        &:after {
+            content: "\f004";
+            font-size: 14px;
+            font-family: "FontAwesome";            
+            color: #ccc;
+            display: inline-block;
+        }
+        
+        &.active {
+            display: block;
+            &:after {
+                content: "\f004";                
+                color: $color-brand;
+            }
+        }
+    }
+
+
+    .app-item:hover{
+        .favourite{
+            display: block;
+        }
+    }
+}

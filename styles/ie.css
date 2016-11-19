@@ -1,0 +1,50 @@
+/*------------------------------------*    $VARIABLES
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+/*------------------------------------*    $BASE
+\*------------------------------------*/
+/*------------------------------------*    $COLOR SWATCHES
+\*------------------------------------*/
+/*------------------------------------*    $COLOR SWATCHES (SHAREPOINT)
+\*------------------------------------*/
+/*------------------------------------*    $TYPOGRAPHY
+\*------------------------------------*/
+/**
+     * Mobile Sizes
+     */
+/**
+     * Tablet
+     */
+/**
+     * Desktop font size
+     * Both tablets and desktops
+     */
+/**
+     * Optional font sizes
+     */
+/*------------------------------------*    $LINKS
+\*------------------------------------*/
+/*------------------------------------*    $FORM
+\*------------------------------------*/
+/*------------------------------------*    $GRID SETTINGS
+\*------------------------------------*/
+/*------------------------------------*    $BREAKPOINTS
+\*------------------------------------*/
+/* 0 - 480 (mobile), 480+ (medium), 600+ (tablet), 960+ (desktop), 1300+ (wide) */
+/**
+ * IE specific css here
+ */
+/**
+ * Dropdown
+ */
+.dropdown .dropdown-inner {
+  border: 1px #cccccc solid; }
+
+/**
+ * Card
+ */
+.docsflow-sp-card, .feedback-form {
+  border: 1px #e5e5e5 solid; }

@@ -1,0 +1,85 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "type": "budget_cuts",
+            "title": "Review of Workplace Safety & Health Laws",
+            "summary": "gist",
+            "status": "Speech",
+            "statusId": 0,
+            "topic": null,
+            "budgetCutTopic": null,
+            "memberOfParliament": {
+                "id": "1",
+                "name": "Arthur Fong",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodSourcing": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "hodDrafting": {
+                "id": "cismam",
+                "name": "ABHIJEET MENON",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "draftingOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "registryOfficer": {
+                "id": "system",
+                "name": "system",
+                "designation": null,
+                "role": null,
+                "email": null
+            },
+            "year": "2015",
+            "relationships": {
+                "id": 5,
+                "category": "Flexible and Progressive Workplaces"
+            },
+            "liasonOfficer": [
+                {
+                    "id": "cisdrk",
+                    "name": "DADI RAMA KRISHNA",
+                    "designation": null,
+                    "role": null,
+                    "email": null
+                }
+            ],
+            "userId": "system",
+            "fileReferenceNo": "",
+            "time": "30",
+            "questionDetail": null,
+            "approvedDraft": "Y",
+            "anticipatedQA": "N",
+            "supplementaryInfo": "N",
+            "createdDate": "December 03, 2015",
+            "newCut": "Y",
+            "sourced": "Y",
+            "workingDraft": "Y",
+            "finalAnswer": "Y",
+            "incorporatedIntoSpeech": "Y",
+            "completedStatus": [
+                "Completed",
+                "Rejected",
+                "Approved",
+                "Pending",
+                "Draft"
+            ]
+        }
+    ]
+}

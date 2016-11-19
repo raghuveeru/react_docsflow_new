@@ -1,0 +1,13 @@
+{
+	"data": [
+		{
+			"id": "2",
+			"name": "Lisa Lawrence",
+			"email": "lisa@lisa.com",
+			"department": "sds",
+			"designation": "MP",
+			"role": ["Member of Parliament"],
+			"online": true
+		}
+	]
+}

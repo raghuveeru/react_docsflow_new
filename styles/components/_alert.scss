@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    ALERT.CSS
+\*------------------------------------*/
+
+.alert{
+    @include rem(margin-bottom);
+    padding: 0.5em 1em;
+    //border-radius: $base-radius;
+    position: relative;
+
+    p, ul{
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/**
+ * Success
+ */
+
+.alert--success{
+    background: $color-green;
+    color: #fff;
+}
+
+/**
+ * Error
+ */
+
+.alert--error{
+    background: $color-red;
+    color: #fff;
+}
+
+
+/**
+ * Alert note
+ */
+
+.alert--note,
+.alert--tip,
+.alert--example{
+    border-left: 6px #CDE3F3 solid;
+    padding-left: 20px;    
+    padding-top: 45px;
+
+    &:before{
+        @extend %icon;
+        content: "\f05a";
+        position: absolute;
+        left: 20px;
+        top: 4px;
+        color: #246699;
+        font-size: 26px;
+    }
+
+    &:after{
+        content: "Note";
+        font-size: 28px;
+        position: absolute;
+        left: 54px;
+        top: 0;
+        color: #246699;
+        font-weight: 200;
+    }
+}
+
+    /**
+     * Tips
+     */
+    
+    .alert--tip{
+        border-left-color: #F9DCA3;
+
+        &:after, &:before{
+            color: #A06D00;
+        }
+
+        &:before{
+            content: "\f0eb";
+        }
+
+        &:after{
+            content: "Tip";
+        }
+    }
+
+    /**
+     * example
+     */
+    
+    .alert--example{
+        border-left-color: #DCCCE3;
+
+        &:after, &:before{
+            color: #74397F;
+        }
+
+        &:before{
+            content: "\f069";
+        }
+
+        &:after{
+            content: "Example";
+        }
+    }

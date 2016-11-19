@@ -1,0 +1,53 @@
+{
+	"data": [
+		{
+			"name": "Lisa Lawrence",
+			"email": "lisa@lisa.com",
+			"designation": "HOD",
+			"department": "Department",
+			"role": 1,
+			"image": "images/profile-img.png",
+			"online": true
+		},
+		{
+			"id": "2",
+			"name": "Lisa Lawrence",
+			"email": "lisa@lisa.com",
+			"department": "Department",
+			"designation": "MP",
+			"role": [1, 2],
+			"type": "mp",
+			"online": true
+		},
+		{
+			"id": "3",
+			"name": "Christopher Brown",
+			"email": "christoper@chris.com",
+			"department": "Department",
+			"designation": "Executive",
+			"role": [1, 2],
+			"image": "images/profile-img.png",
+			"online": false
+		},
+		{
+			"id": "4",
+			"name": "Christopher Brown",
+			"email": "christoper@chris.com",
+			"department": "Department",
+			"designation": "Executive",
+			"role": [1, 2],
+			"image": "images/profile-img.png",
+			"online": false
+		},
+		{
+			"id": "5",
+			"name": "Christopher Brown",
+			"email": "christoper@chris.com",
+			"department": "Department",
+			"designation": "Executive",
+			"role": [1, 2],
+			"image": "images/profile-img.png",
+			"online": false
+		}
+	]
+}

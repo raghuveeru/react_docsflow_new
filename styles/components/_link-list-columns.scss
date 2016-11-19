@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    LINK-LIST CSS COLUMNS
+\*------------------------------------*/
+
+.link-list {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    a { display: block; }
+}
+
+.link-list-three {
+    -webkit-columns: 3 200px;
+         -moz-columns: 3 200px;
+              columns: 3 200px;
+}

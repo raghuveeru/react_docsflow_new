@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    ACCORDION
+\*------------------------------------*/
+
+/*------------------------------------*\
+    ACCORDION.CSS
+\*------------------------------------*/
+
+
+
+%accordion-arrow{
+    @extend %icon;    
+    content: "\f055";
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+}
+
+%accordion-arrow-active{
+    content: "\f056";
+    //color: $color-orange;
+}
+
+.ui-accordion{
+    list-style: none;
+    @include rem(margin-bottom);
+    -webkit-tap-highlight-color: transparent;
+
+    div + &, p + &{
+        @include rem(margin-top, 2);
+    }
+
+}
+
+/* Header */
+
+.accordion__header{
+    border-bottom: 1px #fff solid;
+    position: relative;
+    padding: 10px 15px 10px 40px !important;
+    line-height: 1.5 !important;
+    background: #BCE6FF;
+    color: #174FA2 !important; 
+    cursor: pointer;
+    margin: 0 !important;
+    font-size: 18px !important;
+    //@include user-select(none);
+    font-weight: 600 !important;    
+
+    &:after{
+        @extend %accordion-arrow;
+    }
+    
+    
+    &:first-child{
+        //border-top: 1px $color-border solid;
+    }
+}
+
+
+
+/* Active Content */
+
+.accordion__active{
+
+    color: #fff !important;
+    background: #174FA2 !important;
+    
+    &:after{
+        @extend %accordion-arrow-active;
+    }
+}
+
+/* Content */
+
+.accordion__content{
+    padding: 1em;    
+    display: none;
+    background: #fff;
+}
+
+
+/**
+ * Bordered Accordion
+ */
+
+.ui-accordion--bordered{    
+    border-bottom-width: 0;
+
+    .accordion__header, .accordion__content{
+        padding-left: 1em;
+    }
+
+    /* First child */
+
+    .accordion__header:first-child{
+        border-top-style: none;
+    }    
+}

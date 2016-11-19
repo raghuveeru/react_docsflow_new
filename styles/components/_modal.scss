@@ -1,0 +1,138 @@
+/*------------------------------------*\
+		MODAL.CSS
+\*------------------------------------*/
+
+.ui-modal {
+	// display: none;
+	max-width: 800px;
+	min-width: 300px;
+	max-height: 90%;
+	overflow: auto;
+	background: #fff;
+	padding: 20px 30px;
+	border-radius: $base-radius;	
+	-webkit-box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-o-box-shadow: 0 0 10px #000;
+	-ms-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+	
+
+	.close-modal {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 30px;
+		height: 30px;
+		font-size: 0;
+		text-decoration: none;
+
+		&:hover{
+			opacity: 0.6;	
+		}
+		
+		&:before{
+			font-family: "FontAwesome";
+			content: "\f00d";
+			color: $base-color;
+			font-size: 26px;
+		}
+	}
+
+
+
+}
+
+
+.modal-title{
+	padding-bottom: 20px;
+}
+
+.ui-modal-spinner {
+	display: none;
+	width: 64px;
+	height: 64px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -32px;
+	margin-top: -32px;
+	background: url(../images/spinner.gif) #111 no-repeat center center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+}
+
+
+/**
+ * Dialog
+ */
+
+.modal-dialog{
+	// width: 870px;
+	max-width: 300px;
+	min-width: 300px;
+	
+	@include media(medium){
+		max-width: 580px;
+		min-width: 580px;
+	}
+
+
+	@include media(tablet){
+		max-width: 850px;
+		min-width: 700px;
+	}
+
+	@include media(desktop){
+		min-width: 850px;
+	}
+
+	.modal-dialog-title{
+		font-weight: 100;
+		font-size: 32px;
+		border-bottom: 1px $base-ui-color solid;
+		padding: 15px 30px;
+		margin-bottom: 0;
+	}
+
+	.modal-dialog-body{
+		padding: 1em;
+		@include media(tablet){
+			padding: 15px 30px;
+		}
+	}
+}
+
+
+.ReactModal__Overlay {
+  -webkit-perspective: 600;
+  perspective: 600;
+  opacity: 0;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transition: opacity 150ms ease-out;
+}
+
+.ReactModal__Content {
+  -webkit-transform: scale(0.5) rotateX(-30deg);
+}
+
+.ReactModal__Content--after-open {
+  -webkit-transform: scale(1) rotateX(0deg);
+  transition: all 150ms ease-in;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--before-close {
+  -webkit-transform: scale(0.5) rotateX(30deg);
+  transition: all 150ms ease-in;
+}

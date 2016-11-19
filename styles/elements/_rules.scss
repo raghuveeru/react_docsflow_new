@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    RULES
+\*------------------------------------*/
+
+.rule{
+    color:$base-ui-color;
+    border:none;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    
+    margin: 20px 0;
+
+    .docsflow-sp-card &{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .docsflow-sp-card-body &{
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}
+
+
+.rule--thick{
+    border-width: 5px;
+    border-color: $base-color;
+}

@@ -1,0 +1,2181 @@
+FORMAT: 1A
+HOST: http://localhost:3000/api/
+
+# COS API Documentation
+This is the API blueprint for Momster COS application
+
+# Group Budget cuts
+
+## Budget Cut Collection [/api/v1/budget_cuts{?topics,status,year,userId,query}]
+
++ Parameters
+    + topics: `2` (string)
+    + status: `onSourcing` (string)
+    + year: `2015` (string) 
+    + userId: `10` (string)
+    + query: `manpower` (string)
+
+### Get all Budget cuts [GET]
+
++ Response 200
+	
+	```
+	{
+	    "data": [
+	        {
+	            "id": 1,
+	            "type": "budget_cuts",
+	            "title": "Manpower challenges",
+	            "summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+	            "status": "Final draft",
+	            "memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+	            "hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": {
+					"id": 2,
+					"name": "Richard Wong"
+				},            
+	            "year": "2015",
+	            "relationships": {
+	                "category": "Workplace Safety & Health"
+	            },
+	            "liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+	            "userId": "blahblahblah",
+	            "completedStatus": ["Draft", "Speech"]
+	        },
+	        {
+	            "id": 2,
+	            "type": "budget_cuts",
+	            "title": "Workplace injuries",
+	            "summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+	            "status": "On sourcing",
+	            "memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+	            "hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": {
+					"id": 2,
+					"name": "Richard Wong"
+				},            
+	            "year": "2015",
+	            "relationships": {
+	                "category": "Workplace Safety & Health"
+	            },
+	            "liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+	            "userId": "blahblahblah",
+	            "completedStatus": ["Draft", "Speech"]
+	        },
+	        {
+	            "id": 3,
+	            "type": "budget_cuts",
+	            "title": "Workplace injuries 2",
+	            "summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+	            "status": "Speech",
+	            "memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+	            "hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": {
+					"id": 2,
+					"name": "Richard Wong"
+				},            
+	            "year": "2015",
+	            "relationships": {
+	                "category": "Workplace Safety & Health"
+	            },
+	            "liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+	            "userId": "blahblahblah",
+	            "completedStatus": ["Draft", "Speech"]
+	        }
+	    ],
+	    "totalCount": 200,
+	    "totalUserCount": 10,
+	    "totalStatusCount": [
+	        {
+	            "name": "On Sourcing",
+	            "count": "10"
+	        },
+	        {
+	            "name": "Working draft",
+	            "count": "100"
+	        },
+	        {
+	            "name": "Final draft",
+	            "count": "12"
+	        },
+	        {
+	            "name": "Speech",
+	            "count": "100"
+	        }
+	    ],
+	    "facets": {
+	        "topics": [
+	            {
+	                "name": "Workplace Safety & Health",
+	                "count": "80",
+	                "id": "12"
+	            },
+	            {
+	                "name": "Central Provident Fund",
+	                "count": "15",
+	                "id": "12"
+	            }
+	        ],
+	        "status": [
+	            {
+	                "name": "On Sourcing",
+	                "count": "10"
+	            },
+	            {
+	                "name": "Working draft",
+	                "count": "100"
+	            },
+	            {
+	                "name": "Final draft",
+	                "count": "12"
+	            },
+	            {
+	                "name": "Speech",
+	                "count": "10"
+	            }
+	        ],
+	        "year": [
+	            {
+	                "name": "2015",
+	                "count": "10"
+	            },
+	            {
+	                "name": "2014",
+	                "count": "5"
+	            }
+	        ],
+	        "hodSourcing": [
+	        	{
+	        		"id": 1,
+	        		"name": "Kim Keath",
+	        		"count": "10"
+	        	},
+	        	{
+	        		"id": 2,
+	        		"name": "Kim Keath 2",
+	        		"count": "10"
+	        	}
+	       	],
+	        "hodDrafting": [
+	            {
+	                "id": 1,
+	                "name": "Kim Keath",
+	                "count": "10"
+	            },
+	            {
+	                "id": 2,
+	                "name": "Kim Keath 2",
+	                "count": "10"
+	            }
+	        ]
+	    }
+	}
+	```
+
+## Get a Single Budget cut [/api/v1/budget_cuts/?id]
+
++ Parameters
+	+ id: `121` (string)
+
+### Get a Single Budget cut[GET]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"type": "budget_cuts",
+				"title": "Manpower challenges",
+				"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+				"status": "Final draft",
+				"topic": {
+					"id": "1",
+					"name": "Workplace Safety & Health"
+				},
+				"budgetCutTopic": {
+					"id": "1231312",
+					"name": "Manpower challenges"
+				},
+				"memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+				"hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": "Richard Wong",
+				"year": "2015",
+				"relationships": {
+					"category": "Workplace Safety & Health"
+				},
+				"liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+				"userId": "blahblahblah",
+				"fileReferenceNo": "-",
+				"time": "50",
+				"completedStatus": ["Draft", "Speech"]
+			}
+		]	
+	}
+	```
+
+## Add to speech [/api/v1/add_to_speech/{?ids,userId}]
+
++ Parameters
+	+ ids: `1,2,3,4` (comma separated)
+	+ userId: `12` (string)
+
+### Add to Speech [POST]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"type": "budget_cuts",
+				"title": "Manpower challenges",
+				"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+				"status": "Speech",
+				"topic": {
+					"id": "1",
+					"name": "Workplace Safety & Health"
+				},
+				"budgetCutTopic": {
+					"id": "1231312",
+					"name": "Manpower challenges"
+				},
+				"memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+				"hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": "Richard Wong",
+				"year": "2015",
+				"relationships": {
+					"category": "Workplace Safety & Health"
+				},
+				"liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+				"userId": "blahblahblah",
+				"fileReferenceNo": "-",
+				"time": "50",
+				"completedStatus": ["Draft", "Speech"]		
+			}
+		]	
+	}
+	```
+
+## Undo Add to speech [/api/v1/undo_add_to_speech/{?ids,userId}]
+
++ Parameters
+	+ ids: `1,2,3,4` (comma separated)
+	+ userId: `12` (string)
+
+### Undo Add to Speech [POST]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"type": "budget_cuts",
+				"title": "Manpower challenges",
+				"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+				"status": "Speech",
+				"topic": {
+					"id": "1",
+					"name": "Workplace Safety & Health"
+				},
+				"budgetCutTopic": {
+					"id": "1231312",
+					"name": "Manpower challenges"
+				},
+				"memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+				"hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": "Richard Wong",
+				"year": "2015",
+				"relationships": {
+					"category": "Workplace Safety & Health"
+				},
+				"liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+				"userId": "blahblahblah",
+				"fileReferenceNo": "-",
+				"time": "50",
+				"completedStatus": ["Draft", "Speech"]		
+			}
+		]	
+	}
+	```
+
+
+## Export to excel [/api/v1/export_to_excel/{?ids,userId}]
+
++ Parameters
+	+ ids: `1,2,3,4` (comma separated)
+	+ userId: `12` (string)
+
+### Export to excel [GET]
+
++ Response 200
+	
+	```
+	true
+	```
+
+## Budget Questions [/api/v1/get_question_details{?budgetCutId,userId,details,attachments,hodDrafting,liasonOfficer,edit}]
+
++ Parameters
+	+ budgetCutId: `1` (string)
+	+ edit: `true|false` (string)
+
+### Get Question details [GET]
+
++ Response 200
+
+	```
+	{
+	    "data": [
+	        {
+	            "details": "test...",
+	            "attachments": [
+	                {
+	                    "fileName": "question-details.pdf",
+	                    "fileSize": "200kb",
+	                    "downloadUrl": "http://google.com"
+	                }
+	            ],
+	            "hodDrafting": {
+	                "id": 12,
+	                "name": "Kai Goh"
+	            },
+	            "liasonOfficer": {
+	                "id": 123,
+	                "name": "Samuel Goh"
+	            },
+	            "date": "August 31, 2015"
+	        }
+	    ]
+	}
+	```
+
+### Add/Update a new question [POST]
+
++ Parameters
+	+ budgetCutId: `1` (string)
+	+ userId: `12` (string)
+	+ details: `details of the question` (string)
+	+ attachments: `file` (attachment)
+	+ hodDrafting: `12` User ID of the HOD (string)
+	+ liasonOfficer: `12` User ID of the Liason officer (string)
+
++ Response 200
+	
+	```
+	{
+	    "data": [
+	        {
+	            "details": "test...",
+	            "attachments": [
+	                {
+	                    "fileName": "question-details.pdf",
+	                    "fileSize": "200kb",
+	                    "downloadUrl": "http://google.com"
+	                }
+	            ],
+	            "hodDrafting": {
+	                "id": 12,
+	                "name": "Kai Goh"
+	            },
+	            "liasonOfficer": {
+	                "id": 123,
+	                "name": "Samuel Goh"
+	            },
+	            "date": "August 31, 2015"
+	        }
+	    ]
+	}
+	```
+
+## Working draft details [/api/v1/get_working_draft_details{?budgetCutId,attachments,userId,edit}]
+
++ Parameters
+	+ budgetCutId: `1` (string)
+	+ edit: `true|false` (string)
+
+### Get Working draft details [GET]
+
++ Response 200
+
+	```
+	{
+	    "data": [
+	        {
+	            "available": true,
+	            "attachments": [
+	                {
+	                    "fileName": "question-details.pdf",
+	                    "fileSize": "200kb",
+	                    "downloadUrl": "http://google.com"
+	                }
+	            ],
+	            "date": "August 31, 2015"
+	        }
+	    ]
+	}
+	```
+
+## Add/Update new working draft [POST]
+
++ Parameters
+	+ attachments: (attachments)
+	+ userId: `12` User ID of the logged in user (string)
+
++ Response 200
+
+	```
+	{
+	    "data": [
+	        {
+	            "available": true,
+	            "attachments": [
+	                {
+	                    "fileName": "question-details.pdf",
+	                    "fileSize": "200kb",
+	                    "downloadUrl": "http://google.com"
+	                }
+	            ],
+	            "date": "August 31, 2015"
+	        }
+	    ]
+	}
+	```
+
+## Final approved reply [/api/v1/get_final_approved_reply{?budgetCutId,attachments,types,userId,edit}]
+
++ Parameters
+	+ budgetCutId: `1` (string)
+	+ edit: `true|false` (string)
+
+### Get final approved reply [GET]
+
++ Response 200
+
+	```
+	{
+	    "data": [
+	        {
+	            "available": true,
+	            "attachments": [
+	                {
+	                    "fileName": "question-details.pdf",
+	                    "fileSize": "200kb",
+	                    "downloadUrl": "http://google.com"
+	                }
+	            ],
+	            "types": ["Approved draft", "Anticipated Q&A", "Supplementary Info (upto confidential only)"],
+	            "date": "August 31, 2015"
+	        }
+	    ]
+	}
+	```
+
+### Add/Update new Final approved reply [POST]
+
++ Parameters
+	+ budgetCutId: `1` (string)
+	+ attachments: (attachments)
+	+ types: `['Approved draft']` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+	    "data": [
+	        {
+	            "available": true,
+	            "attachments": [
+	                {
+	                    "fileName": "question-details.pdf",
+	                    "fileSize": "200kb",
+	                    "downloadUrl": "http://google.com"
+	                }
+	            ],
+	            "types": ["Approved draft", "Anticipated Q&A", "Supplementary Info (upto confidential only)"],
+	            "date": "August 31, 2015"
+	        }
+	    ]
+	}
+	```
+
+## Assign to Officer [/api/v1/assign_to_officer{?budgetCutId,status,responsibleOfficer,officersToNotify,message,subject,userId}]
+
++ Parameters
+	+ budgetCutId: `12` (string)
+	+ status: `Final draft` (string)
+	+ responsibleOfficer: `1,2,3,4` (comma separated)
+	+ officersToNotify: `1,2,3,4` (comma separated)
+	+ message: `email message` (string)	
+	+ subject: `Subject of the email` (string)
+	+ userId: `5678` User ID of the Logged in User (string)
+
+### Assign to Officer [POST]
+
++ Response 200
+	
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"type": "budget_cuts",
+				"title": "Manpower challenges",
+				"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+				"status": "Final draft",
+				"topic": {
+					"id": "1",
+					"name": "Workplace Safety & Health"
+				},
+				"budgetCutTopic": {
+					"id": "1231312",
+					"name": "Manpower challenges"
+				},
+				"memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+				"hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": "Richard Wong",
+				"year": "2015",
+				"relationships": {
+					"category": "Workplace Safety & Health"
+				},
+				"liasonOfficer": {
+					"id": 121,
+					"name": "liasonOfficer"
+				},
+				"userId": "blahblahblah",
+				"fileReferenceNo": "-",
+				"time": "50"			
+			}
+		]	
+	}
+	```
+
+
+## Get budget cut activity [/api/v1/budget-cut-activity{?budgetCutId}]
+
++ Parameters
+	+ budgetCutId: `12` (string)
+
+### Get budget cut activity [GET]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"action": "allocated question",
+				"from": [{
+					"name": "Jane Goh",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				}],
+				"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+				"to": [{
+					"name": "Samuel Seah",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				},{
+					"name": "Samuel Seah 2",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				}],
+				"cc": [{
+					"name": "Samuel Seah",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				},{
+					"name": "Samuel Seah 2",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				}],
+				"status": "Draft",
+				"subject": "Subject here",
+				"date": "August 28, 2015"
+			},
+			{
+				"action": "created and assigned the budget cut",
+				"from": [{
+					"name": "Jane Goh",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				}],
+				"cc": [{
+					"name": "Samuel Seah",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				},{
+					"name": "Samuel Seah 2",
+					"url": "http://profile_url",
+					"image": "images/profile-img.png",
+					"role": [5]
+				}],
+				"subject": "Subject here",
+				"status": "Draft",
+				"message": "Message 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+				"date": "August 28, 2015"
+			}
+		]
+	}
+	```
+
+## Create new budget cut [/api/v1/budget_cuts{?topicId,budgetCutId,memberOfParliament,hodSourcing,fileReferenceNo,summary,time,status,responsibleOfficer,officersToNotify,message,userId,subject}]
+
++ Parameters
+	+ topicId: `1` (string)
+	+ budgetCutId: `1` (string)
+	+ memberOfParliament: `2` ID of member of parliament (string)
+	+ hodSourcing: `23` User ID of HOD Sourcing (string)
+	+ fileReferenceNo: `blah` (string)
+	+ summary: `blah` (string)
+	+ message: `Message of the email` (string)
+	+ subject: `Subject of the email` (string)
+	+ time: `blah` (string)
+	+ status: `Working draft` (string)	
+	+ responsibleOfficer: `[1,2]` (Array)
+	+ officersToNotify: `[1,2]` (Array)
+	+ userId: `5678` User ID of the Logged in User (string) 
+
+## New budget cut [POST]
+
++ Response 200
+
+	```
+	{
+		"data": {
+			"id": 1,
+			"type": "budget_cuts",
+			"title": "Manpower challenges",
+			"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+			"status": "finalDraft",
+			"memberOfParliament": "Alex Yam",
+			"hodSourcing": "DOSHI- Chan Yew Kwong",
+			"hodDrafting": "Richard Wong",
+			"year": "2015",
+			"relationships": {
+				"category": "Workplace Safety & Health"
+			}
+		}
+	}
+	```
+
+
+## Get Main Topics [/api/v2/get-topics{?year}]
+
+### Get main topics [GET]
+
++ Parameters
+
+	+ year: `2015` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1",
+				"name": "Workplace Safety & Health",
+				"budgetCutTopic": [
+					{
+						"id": "1231312",
+						"name": "Manpower challenges"
+					},
+					{
+						"id": "123",
+						"name": "Manpower challenges 2"
+					}
+				]
+			},
+			{
+				"id": "2",
+				"name": "Central Providence Fund",
+				"budgetCutTopic": [
+					{
+						"id": "1231312",
+						"name": "Manpower challenges for CPF"
+					}
+				]
+			}
+		]
+	}
+	```
+
+## Update Budget cut [/api/v1/update-budget-cut{?id,topicId,budgetCutId,memberOfParliament,hodSourcing,fileReferenceNo,summary,time,userId}]
+
+### Update Budget Cut [POST]
+
++ Parameters
+	+ id: `12` (string)
+	+ topicId: `12` (string)
+	+ budgetCutId: `1212` (string)
+	+ memberOfParliament: `1212` (string)
+	+ hodSourcing: `121` (string)
+	+ fileReferenceNo: `reference` (string)
+	+ summary: `text` (string)
+	+ time: `time taken` (string)
+	+ userId: `12` (string)
+
+## Delete budget cut [/api/v1/delete-budget-cut{?id}]
+
+### Delete budget cut [POST]
+
++ Parameters
+	+ id: `12` (string)
+
++ Response 200
+	
+	```
+	{
+		"success": true
+	}
+	```
+
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"type": "budget_cuts",
+				"title": "Manpower challenges",
+				"summary": "This approach has a number of advantages and implications. It provides a constitutional foundation for the harmless error doctrine, explains why the same exclusionary principles apply to different constitutional rights.",
+				"status": "Final draft",
+				"topic": {
+					"id": "1",
+					"name": "Workplace Safety & Health"
+				},
+				"budgetCutTopic": {
+					"id": "1231312",
+					"name": "Manpower challenges"
+				},
+				"memberOfParliament": {
+					"id": "2",
+					"name": "Alex Yam"
+				},
+				"hodSourcing": {
+					"id": 2,
+					"name": "DOSHI- Chan Yew Kwong"
+				},
+				"hodDrafting": "Richard Wong",
+				"year": "2015",
+				"relationships": {
+					"category": "Workplace Safety & Health"
+				},
+				"liasonOfficer": "Richard Khong",
+				"userId": "blahblahblah",
+				"fileReferenceNo": "-",
+				"time": "50"			
+			}
+		]	
+	}
+	```
+
+
+## Delete attachment [/api/v1/delete-attachment{?budgetCutId,id,type,userId}]
+
+### Delete attachment [POST]
+
++ Parameters
+	+ budgetCutId: `12` (string)
+	+ id: `1` ID of the attachment (string)
+	+ type: `questionDetails|workingDraftDetails|finalDraftDetails` (string)
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+## Create Edit flag [/api/v1/create-edit(?type,budgetCutId,userId,edit)]
+
+### Create edit flag [POST]
+
++ Parameters
+
+	+ type: `questionDetails|workingDraftDetails|finalDraftDetails` (string)
+	+ budgetCutId: `12` (string)
+	+ edit: `true` (string)
+	+ userId: `1` (string)
+
++ Response 403
+
+	```
+	{
+		"errors": [{
+			"error": "Someone else is editing the document"
+		}]
+	}
+	```
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+## Cancel Edit flag [/api/v1/create-edit(?type,budgetCutId,userId,edit)]
+
+### Cancel Edit flag [POST]
+
++ Parameters
+
+	+ type: `questionDetails|workingDraftDetails|finalDraftDetails` (string)
+	+ budgetCutId: `23` (string)
+	+ edit: `false` (string)
+	+ userId: `1` (string)
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+# Group Users
+
+## Users [/api/v1/users{?userId,roles,memberOfParliament,email,name,hodSourcing,q,id,department,type}]
+
++ Model (application/json)
+
+    ```js
+    {
+    	data: [{
+			"name": "Lisa Lawrence",
+			"designation": "HOD",
+			"role": ["HOD Officers"]
+		}]
+	},
+    ```
+
+### Get User Role [GET]
+
++ Parameters
+
+	+ userId: `12` (string)
+
++ Response 200
+	
+	```
+	{
+		"data": [
+			{
+				"id": 2,
+				"roleId": 1,
+				"name": "Vinay M"
+			}
+		]
+	}
+	```
+
+### Get all users [GET]
+
++ Parameters
+
+	+ q: `keywords` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"name": "Lisa Lawrence",
+				"email": "lisa@lisa.com",
+				"designation": "HOD",
+				"department": "Department",
+				"role": 1,
+				"image": "images/profile-img.png",
+				"online": true
+			},
+			{
+				"id": "2",
+				"name": "Lisa Lawrence",
+				"email": "lisa@lisa.com",
+				"department": "Department",
+				"designation": "MP",
+				"role": [1, 2],
+				"type": "mp",
+				"online": true
+			},
+			{
+				"id": "3",
+				"name": "Christopher Brown",
+				"email": "christoper@chris.com",
+				"department": "Department",
+				"designation": "Executive",
+				"role": [1, 2],
+				"image": "images/profile-img.png",
+				"online": false
+			}
+		]
+	}
+	```
+
+### Create a user [POST]
+
++ Parameters
+	
+    + userId: `12` (string)
+    + roles: ['Speech Writer', 'System Administrator'] (array)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1",
+				"name": "Lisa Lawrence",
+				"email": "lisa@lisa.com",
+				"designation": "HOD",
+				"role": ["Speech Writer"],
+				"image": "images/profile-img.png",
+				"online": true
+			}
+		]
+	}
+	```
+
+### Create a MP [POST]
+
++ Parameters
+
+	+ name: `Name of mp` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "2",
+				"name": "Lisa Lawrence",
+				"email": "lisa@lisa.com",
+				"designation": "MP",
+				"role": ["Member of Parliament"],			
+				"online": true
+			}
+		]
+	}
+	```
+
+### Create a HOD [POST]
+
++ Parameters
+
+	+ userId: `12` (string)
+    + roles: ['Head of Department'] (array)
+	+ memberOfParliament: `1212` (string)
+
++ Response 200
+
+	```
+		{
+		"data": [
+			{
+				"id": "3",
+				"name": "Christopher Brown",
+				"email": "christoper@chris.com",
+				"designation": "Executive",
+				"role": ["Head of Department"],
+				"image": "images/profile-img.png",
+				"online": false
+			}
+		]
+	}
+	```
+
+### Create a Liason officer [POST]
+
++ Parameters
+
+	+ userId: `12` (string)
+    + roles: ['Head of Department'] (array)
+	+ hodSourcing: `1212` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "5",
+				"name": "Christopher Brown",
+				"email": "christoper@chris.com",
+				"designation": "Executive",
+				"role": ["Liaison Officers"],
+				"image": "images/profile-img.png",
+				"online": false
+			}
+		]
+	}
+	```
+
+### Delete a user [DELETE]
+
++ Parameters
+	
+	+ id: `12` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+
+### Update a user [POST]
+
++ Parameters
+
+	+ id: `1` (string)
+	+ type: `user|mp` (string)
+	+ roles: `[1,2]` (array)
+	+ department: `CRD` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1",
+				"name": "Lisa Lawrence",
+				"email": "lisa@lisa.com",
+				"department": "CRD",
+				"designation": "HOD",
+				"role": [2,3],
+				"image": "images/profile-img.png",
+				"online": true
+			}
+		]
+	}
+	```
+
+### Update a MP [POST]
+
++ Parameters
+
+	+ id: `1` (string)
+	+ type: `user|mp` (string)
+	+ name: `Blah` (array)	
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "2",
+				"name": "Lisa Lawrence",
+				"email": "lisa@lisa.com",
+				"department": "sds",
+				"designation": "MP",
+				"role": ["Member of Parliament"],
+				"online": true
+			}
+		]
+	}
+	```
+
+## Get all Liason Officers [/api/v1/get-all-liason-officers{?q}]
+
+### Get all Liason Officers[GET]
+
++ Parameters
+
+	+ q: `keywords` (string)
+
++ Response 200
+	
+	```
+		{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Lisa Lawrence",
+				"designation": "HOD",
+				"role": ["HOD Officers"]
+			},
+			{
+				"id": "1213",
+				"name": "Christopher Brown",
+				"designation": "Executive",
+				"role": ["HOD Officers"]
+			}
+		]
+	}
+	```
+
+## Get HOD Drafting Users [/api/v1/get-hod-drafting-user{?q}]
+
+### Get HOD Drafting Users[GET]
+
++ Parameters
+
+	+ q: `keywords` (string)
+
++ Response 200
+	
+	```
+	{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Lisa Lawrence",
+				"designation": "HOD",
+				"role": ["HOD Officers"]
+				"liasonOfficer": {
+					"name": "Steve Kong",
+					"id": "12"
+				}
+			},
+			{
+				"id": "1213",
+				"name": "Christopher Brown",
+				"designation": "Executive",
+				"role": ["HOD Officers"]
+				"liasonOfficer": {
+					"name": "Steve Kong",
+					"id": "12"
+				}
+			}
+		]
+	}
+	```
+
+## Get HOD Sourcing Users [/api/v1/get-hod-sourcing-user{?memberOfParliament,q}]
+
+### Get HOD Sourcing Users[GET]
+
++ Parameters
+	+ memberOfParliament: `1212` (string)
+	+ q: `query text` (string)
+
++ Response 200
+	
+	```
+	{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Lisa Lawrence",
+				"designation": "HOD",
+				"role": ["HOD Officers"]
+				"liasonOfficer": {
+					"name": "Steve Kong",
+					"id": "12"
+				}
+			},
+			{
+				"id": "1213",
+				"name": "Christopher Brown",
+				"designation": "Executive",
+				"role": ["HOD Officers"]
+				"liasonOfficer": {
+					"name": "Steve Kong",
+					"id": "12"
+				}
+			}
+		]
+	}
+	```
+
+## Get officers to notify [/api/v1/get-officers-to-notify{?q}]
+
+### Get officers to notify [GET]
+
++ Parameters
+
+	+ q: `keywords` (string)
+
++ Response 200
+	
+	```
+	{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Lisa Lawrence",
+				"designation": "HOD",
+				"role": ["HOD Officers"]
+			},
+			{
+				"id": "1213",
+				"name": "Christopher Brown",
+				"designation": "Executive",
+				"role": ["HOD Officers"]
+			}
+		]
+	}
+	```
+
+## Get responsible officers [/api/v1/get-responsible-officers{?q}]
+
+### Get responsible officers [GET]
+
++ Parameters
+
+	+ q: `keywords` (string)
+
++ Response 200
+	
+	```
+	{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Lisa Lawrence",
+				"designation": "HOD",
+				"role": ["HOD Officers"]
+			},
+			{
+				"id": "1213",
+				"name": "Christopher Brown",
+				"designation": "Executive",
+				"role": ["HOD Officers"]
+			}
+		]
+	}
+	```
+
+## Get MPs [/api/v1/get-mps{?q}]
+
+### Get MPs [GET]
+
++ Parameters
+
+	+ q: `keywords` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Lisa Lawrence",
+				"designation": "HOD",
+				"role": ["HOD sourcing"],
+				"hodOfficer": {
+					"name": "Steve Kong",
+					"id": "12"
+				},
+				"image": "images/profile-img.png"
+			},
+			{
+				"id": "1213",
+				"name": "Christopher Brown",
+				"designation": "Executive",
+				"role": ["Liaison Officers"],
+				"hodOfficer": {
+					"name": "Steve Kong",
+					"id": "12"
+				},
+				"image": "images/profile-img.png"
+			}
+		]
+	}
+	```
+
+
+
+# Group Topics
+
+## Main Topics [/api/get-main-topics{?topicId,topicName,userId,year,id,name}]
+
+### Get all main topics [GET]
+
++ Parameters
+
+	+ year: `2015` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1",
+				"name": "Workplace Safety & Health",
+				"budgetCutTopic": [
+					{
+						"id": "1231312",
+						"name": "Manpower challenges"
+					},
+					{
+						"id": "123",
+						"name": "Manpower challenges 2"
+					}
+				]
+			},
+			{
+				"id": "2",
+				"name": "Central Providence Fund",
+				"budgetCutTopic": [
+					{
+						"id": "1231312",
+						"name": "Manpower challenges for CPF"
+					}
+				]
+			}
+		]
+	}
+	```
+
+
+### Create Main Topic [POST]
+
++ Parameters
+	+ name: `Name of the topic` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "12233",
+				"name": "A new main topic",
+				"budgetCutTopic": []
+			}
+		]
+	}
+	```
+
+
+### Edit Main Topic [POST]
+
++ Parameters
+	+ id: `12` (string)
+	+ name: `name of the topic` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1",
+				"name": "A new main topic (Edited)",
+				"budgetCutTopic": []
+			}
+		]
+	}
+
+### Delete Main Topic [POST]
+
++ Parameters
+	+ id: `12` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+## Budget Cut Topic [/api/budget-cut-topics/{?budgetCutTopicId,topicId,topicName,budgetCutTopicName,q,userId,id,name}]
+
+### Get all Budget Cut Topics [GET]
+
++ Parameters
+	+ id: `12` (string)
+	+ q: `query text` (string)
+
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1212",
+				"name": "Manpower challenges",
+				"mainTopic": "Workplace Safety & Health"
+			}
+		]
+	}
+	```
+
+### Create Budget Cut Topic [POST]
+
++ Parameters
+	+ name: `Name of the new budget cut topic` (string)
+	+ topicId: `12` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "12233",
+				"topicId": "1",
+				"name": "A new main budget cut topic"
+			}
+		]
+	}
+	```
+
+### Edit Budget Cut Topic [POST]
+
++ Parameters
+
+	+ topicId: `12` (string)
+	+ id: `12` (string)
+	+ name: `name of the budget cut topic` (string)	
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": "1231312",
+				"topicId": "1",
+				"name": "A new main budget cut topic"
+			}
+		]
+	}
+
+### Delete Budget Cut Topic [POST]
+
++ Parameters
+	+ id:  `11` (string)
+	+ topicId: `12` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+## Order Topics [/api/v1/update-order-topic{?topics,mainTopicId,subTopics,userId,topicId}]
+
+### Order Main Topics [POST]
+
++ Parameters
+	+ topics: (array)
+	+ userId: `12` (string)
+
++ Request
+
+	```
+	{
+	    "topics": [
+	        {
+	            "id": "2",
+	            "name": "Central Providence Fund",
+	            "budgetCutTopic": [
+	                {
+	                    "id": "1231312",
+	                    "name": "Manpower challenges for CPF",
+	                    "order": 1
+	                }
+	            ],
+	            "order": 1
+	        },
+	        {
+	            "id": "1",
+	            "name": "Workplace Safety & Health",
+	            "budgetCutTopic": [
+	                {
+	                    "id": "1231312",
+	                    "name": "Manpower challenges",
+	                    "order": 1
+	                },
+	                {
+	                    "id": "123",
+	                    "name": "Manpower challenges 2",
+	                    "order": 2
+	                }
+	            ],
+	            "order": 2
+	        }
+	    ]
+	}
+	```
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+### Order Sub Topics [POST]
+
++ Parameters
+	+ topicId:  `12` (string)
+	+ topics:  (array)
+	+ userId: `12` (string)
+
+
++ Request
+
+	```
+	{
+	    "topicId": "1",
+	    "topics": [
+	        {
+	            "id": "123",
+	            "name": "Manpower challenges 2",
+	            "order": 1
+	        },
+	        {
+	            "id": "1231312",
+	            "name": "Manpower challenges",
+	            "order": 2
+	        }
+	    ],
+	    userId: "12"
+	}
+	```
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```
+
+
+## Get topic years [/api/v1/get-topic-years]
+
+### Get topic years
+
++ Response 200
+
+	```
+	{
+		"data": ["2015","2014","2013","2012","2010"]
+	}
+	```
+
+# Group Mapping
+
+## MP to HODs [/api/v1/mp-to-hods{?hods,memberOfParliament,userId,id}]
+
+### Get All MP to HOD mapping [GET]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"memberOfParliament": {
+					"id": 2,
+					"name": "Name of the MP"
+				},
+				"hods": [
+					{
+						"id": 2,
+						"name": "Hod Name 1"
+					},
+					{
+						"id": 3,
+						"name": "Hod Name 2"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"memberOfParliament": {
+					"id": 2,
+					"name": "Name of the MP"
+				},
+				"hods": [
+					{
+						"id": 2,
+						"name": "Hod Name 1"
+					},
+					{
+						"id": 3,
+						"name": "Hod Name 2"
+					}
+				]
+			}
+		]
+	}
+	```
+
+### Create MP to HOD mapping [POST]
+
++ Parameters
+
+	+ memberOfParliament: `12` (string)
+	+ hods: `[1,2]` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 3,
+				"memberOfParliament": {
+					"id": 2,
+					"name": "Newly added MP"
+				},
+				"hods": [
+					{
+						"id": 2,
+						"name": "Hod Name 1"
+					},
+					{
+						"id": 3,
+						"name": "Hod Name 2"
+					}
+				]
+			}
+		]
+	}
+	```
+
+### Update MP to HOD mapping [POST]
+
++ Parameters
+	
+	+ id: `1` (string)
+	+ memberOfParliament: `12` (string)
+	+ hods: `[1,2]` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 3,
+				"memberOfParliament": {
+					"id": 2,
+					"name": "Newly added MP"
+				},
+				"hods": [
+					{
+						"id": 2,
+						"name": "Hod Name 1"
+					},
+					{
+						"id": 3,
+						"name": "Hod Name 2"
+					}
+				]
+			}
+		]
+	}
+	```
+
+### Delete MP to HOD mapping [DELETE]
+
++ Parameters
+	
+	+ memberOfParliament: `12` (string)
+	+ hods: `[1,2]` (array)
+	+ userId: `12` (string)	
+
++ Response
+
+	```
+	{
+		"success": true
+	}
+	```
+
+## HOD to Liason Officers [/api/v1/hod-to-liasonofficers{?hod,liasonOfficers,userId,id}]
+
+### Get All HOD to Liason officers mapping [GET]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 2,
+				"hod": {
+					"id": 2,
+					"name": "Name of hod"
+				},
+				"liasonOfficers": [
+					{
+						"id": 2,
+						"name": "liasonOfficers Name 1"
+					},
+					{
+						"id": 3,
+						"name": "liasonOfficers Name 2"
+					}
+				]
+			}
+		]
+	}
+	```
+
+### Create HOD to Liason officer mapping [POST]
+
++ Parameters
+
+	+ liasonOfficers: `[1,2]` (string)
+	+ hod: `1` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 2,
+				"hod": {
+					"id": 2,
+					"name": "Name of a hod"
+				},
+				"liasonOfficers": [
+					{
+						"id": 2,
+						"name": "liasonOfficers Name 1"
+					},
+					{
+						"id": 3,
+						"name": "liasonOfficers Name 2"
+					}
+				]
+			}
+		]
+	}
+	```
+
+### Update HOD to Liason officer mapping [POST]
+
++ Parameters
+	
+	+ id: `1` (string)
+	+ liasonOfficers: `[1,2]` (string)
+	+ hod: `1` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 2,
+				"hod": {
+					"id": 2,
+					"name": "Name of a hod"
+				},
+				"liasonOfficers": [
+					{
+						"id": 2,
+						"name": "liasonOfficers Name 1"
+					},
+					{
+						"id": 3,
+						"name": "liasonOfficers Name 2"
+					}
+				]
+			}
+		]
+	}
+	```
+
+### Delete HOD to Liason officer mapping [DELETE]
+
++ Parameters
+
+	+ hod: `1` (string)
+	+ liasonOfficers: `[1,2]` (array)
+	+ userId: `12` (string)
+
++ Response
+
+	```
+	{
+		"success": true
+	}
+	```
+
+# Group Notifications
+
+## Notifications [/api/v1/notifications]
+
+### Get All notifications [GET]
+
++ Response 200
+
+	```
+	{	
+		"data": [
+		    {
+		        "notification_id": 21013,
+		        "text": "Events Spotlight flow",
+		        "url": "/Events/Pages/BlogView.aspx?itemId=85",
+		        "target_User": "system",
+		        "thumbnail_Image": "/Events/Lists/Posts/Attachments/85/Events_85_Thumbnail.jpeg",
+		        "is_Read": true,
+		        "is_Active": false,
+		        "created_By": "ARCHANA RAJU",
+		        "created_Date": "\\/Date(1445854211477)\\/",
+		        "days": "21 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": null,
+		        "module_Name": "Events",
+		        "approve_Status": 0,
+		        "approvedate": null,
+		        "post_Id": 85
+		    },
+		    {
+		        "notification_id": 21001,
+		        "text": "Events Happening flow",
+		        "url": "/Events/Pages/BlogView.aspx?itemId=84",
+		        "target_User": "system",
+		        "thumbnail_Image": "/Events/Lists/Posts/Attachments/84/Events_84_Thumbnail.jpeg",
+		        "is_Read": true,
+		        "is_Active": false,
+		        "created_By": "ARCHANA RAJU",
+		        "created_Date": "\\/Date(1445854101197)\\/",
+		        "days": "21 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": null,
+		        "module_Name": "Events",
+		        "approve_Status": 0,
+		        "approvedate": null,
+		        "post_Id": 84
+		    },
+		    {
+		        "notification_id": 20942,
+		        "text": "sdf",
+		        "url": "/Announcements/Pages/BlogView.aspx?itemId=286",
+		        "target_User": "system",
+		        "thumbnail_Image": "/Announcements/Lists/Posts/Attachments/286/Announcements_286_Thumbnail.jpeg",
+		        "is_Read": true,
+		        "is_Active": false,
+		        "created_By": "System Account",
+		        "created_Date": "\\/Date(1445497987833)\\/",
+		        "days": "25 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": "\\/Date(1445497987850)\\/",
+		        "module_Name": "Announcements",
+		        "approve_Status": 1,
+		        "approvedate": "22/10/2015 3:13:07 PM",
+		        "post_Id": 286
+		    },
+		    {
+		        "notification_id": 20930,
+		        "text": "uat test",
+		        "url": "/Announcements/Pages/BlogView.aspx?itemId=283",
+		        "target_User": "system",
+		        "thumbnail_Image": "/Announcements/Lists/Posts/Attachments/283/Announcements_283_Thumbnail.jpeg",
+		        "is_Read": true,
+		        "is_Active": false,
+		        "created_By": "System Account",
+		        "created_Date": "\\/Date(1445223402387)\\/",
+		        "days": "28 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": "\\/Date(1445223402397)\\/",
+		        "module_Name": "Announcements",
+		        "approve_Status": 1,
+		        "approvedate": "19/10/2015 10:56:42 AM",
+		        "post_Id": 283
+		    },
+		    {
+		        "notification_id": 20989,
+		        "text": "New Events Flow",
+		        "url": "/Events/Pages/BlogView.aspx?itemId=80",
+		        "target_User": "system",
+		        "thumbnail_Image": "/Events/Lists/Posts/Attachments/80/Events_80_Thumbnail.jpeg",
+		        "is_Read": false,
+		        "is_Active": false,
+		        "created_By": "ARCHANA RAJU",
+		        "created_Date": "\\/Date(1445846087117)\\/",
+		        "days": "21 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": null,
+		        "module_Name": "Events",
+		        "approve_Status": 0,
+		        "approvedate": null,
+		        "post_Id": 80
+		    },
+		    {
+		        "notification_id": 21126,
+		        "text": "Test Events Classified",
+		        "url": "/Events/Pages/BlogView.aspx?itemId=86",
+		        "target_User": "system",
+		        "thumbnail_Image": "/Events/Lists/Posts/Attachments/86/Events_86_Thumbnail.jpeg",
+		        "is_Read": false,
+		        "is_Active": false,
+		        "created_By": "SIRIWARDANA RUWAN",
+		        "created_Date": "\\/Date(1447396747947)\\/",
+		        "days": "3 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": null,
+		        "module_Name": "Events",
+		        "approve_Status": 0,
+		        "approvedate": null,
+		        "post_Id": 86
+		    },
+		    {
+		        "notification_id": 21120,
+		        "text": "system assigned budget cut to you to update question details",
+		        "url": "http://momster-uat.intranet.mom.gov.sg",
+		        "target_User": "system",
+		        "thumbnail_Image": "",
+		        "is_Read": false,
+		        "is_Active": false,
+		        "created_By": "system",
+		        "created_Date": "\\/Date(1447208170730)\\/",
+		        "days": "5 Days ago",
+		        "created_Source": null,
+		        "approve_Group": "",
+		        "approve_Date": null,
+		        "module_Name": "COS",
+		        "approve_Status": 0,
+		        "approvedate": null,
+		        "post_Id": 0
+		    }
+		]
+	}
+	```
+
+# Group Groups
+
+## Get all groups [/api/v1/GET_ALL_GROUPS]
+
+### Get all groups [GET]
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 1,
+				"name": "Group 1",
+				"users": [
+					{
+	                	"id": "DISCWK",
+	                	"name": "EILEEN CHAN WHEE KHIM"
+	            	},
+	                {
+	                    "id": "DISCWK2",
+	                    "name": "2EILEEN CHAN WHEE KHIM"
+	                }
+				]
+			},
+			{
+				"id": 2,
+				"name": "Group 2",
+				"users": [
+					{
+	                	"id": "DISCWK",
+	                	"name": "EILEEN CHAN WHEE KHIM"
+	            	},
+	                {
+	                    "id": "DISCWK2",
+	                    "name": "2EILEEN CHAN WHEE KHIM"
+	                }
+				]
+			},
+			{
+				"id": 2,
+				"name": "Group 2",
+				"users": [
+					{
+	                	"id": "DISCWK",
+	                	"name": "EILEEN CHAN WHEE KHIM"
+	            	},
+	                {
+	                    "id": "DISCWK2",
+	                    "name": "2EILEEN CHAN WHEE KHIM"
+	                }
+				]
+			}
+		]
+	}
+	```
+
+## Create new group [/api/v1/CREATE_NEW_GROUP{?name,userId,users}]
+
+### Create new group [POST]
+
++ Parameters
+
+	+ name: `Name of the group` (string)
+	+ users: `[1,2,3]` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 5,
+				"name": "New group name",
+				"users": [
+					{
+	                	"id": "DISCWK",
+	                	"name": "EILEEN CHAN WHEE KHIM"
+	            	}
+				]
+			}
+		]
+	}
+	```
+
+## Edit group [/api/v1/EDIT_GROUP{?id, userId, name, users}]
+
+### Edit group [POST]
+
++ Parameters
+	
+	+ id: `Id of the group` (string)
+	+ name: `Name of the group` (string)
+	+ users: `[1,2,3]` (array)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"data": [
+			{
+				"id": 5,
+				"name": "New group name",
+				"users": [
+					{
+	                	"id": "DISCWK",
+	                	"name": "EILEEN CHAN WHEE KHIM"
+	            	}
+				]
+			}
+		]
+	}
+	```
+
+## Delete group [/api/v1/DELETE_GROUP{?id, userId}]
+
+### Delete group [POST]
+
++ Parameters
+
+	+ id: `Id of the group` (string)
+	+ userId: `12` (string)
+
++ Response 200
+
+	```
+	{
+		"success": true
+	}
+	```

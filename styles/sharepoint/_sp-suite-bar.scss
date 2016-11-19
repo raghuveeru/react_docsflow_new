@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    SUITE BAR
+\*------------------------------------*/
+
+.sp-suite-bar{
+    background: $suite-bar-background;
+    color: $suite-bar-color;
+    min-height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: right;
+    @include clearfix;    
+    font-size: 14px;
+    z-index: 4;
+
+    @include media(tablet){
+        background-color: transparent;
+    }
+
+
+    /* Links */
+
+    a{
+        @include link-colors($suite-bar-link-color, $suite-bar-link-color);
+    }
+
+    a{
+        padding: 0 10px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover{
+            color: #000;
+        }
+
+        &, &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+
+/**
+ * Suite bar branding
+ */
+
+.suite-bar-branding{
+    float: left;
+}
+
+/**
+ * Suite bar dropdown
+ */
+
+.notification-dropdown{
+    display: inline-block;
+    position: relative;
+}

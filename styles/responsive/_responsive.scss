@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    RESPONSIVE.CSS
+\*------------------------------------*/
+
+/**
+ * Mobile First
+ * Base Width: 320px
+ */
+
+
+
+/* Mobile only */
+
+@include media(mobile){
+
+    @import "../grids/grid-phone";
+
+    .hide-for-phone{
+        display: none !important;
+    }
+
+}
+
+/* Medium and up */
+
+@include media(medium){
+
+    @import "../grids/grid";
+
+    // .hide-for-phone{
+    //     display: none;
+    // }
+}
+
+/* Tablet and up */
+
+@include media(tablet){
+
+    .docsflow-container{
+        width: 750px;
+    }
+
+}
+
+/* Tablet only */
+
+@include media(tablet-only){
+
+    @import "../grids/grid-tablet";
+
+    .hide-for-tablet{
+        display: none;
+    }
+
+}
+
+/* Desktop and up */
+
+@include media(desktop){
+
+    /*
+     * Show Hide Sections
+     */
+
+    .show-for-desktop{
+        display: inherit;
+    }
+
+    .hide-for-desktop{
+        display: none;
+    }
+
+
+    /**
+     * Container
+     */
+
+    .docsflow-container{
+        width: $site-width;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* Widescreen and up */
+
+@include media(wide){
+
+    .docsflow-container{
+        //width: 1170px;
+    }
+}

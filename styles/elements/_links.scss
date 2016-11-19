@@ -1,0 +1,253 @@
+/*------------------------------------*\
+    LINKS
+\*------------------------------------*/
+
+a{
+	@include link-colors($link-color, $link-hover-color, $link-active-color);
+	text-decoration: none;
+    cursor: pointer;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+
+
+/**
+ * Toggle link
+ */
+
+.link-toggle{
+
+    &:after{
+        font-family: "FontAwesome";
+        margin-left: 0.3em;
+        content: "\f0d7";
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &.active:after{
+        content: "\f0d8";
+    }
+}
+
+
+/**
+ * Link filter toggle
+ */
+
+.link-filter-toggle{
+
+    //float: right;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 1em;
+
+
+    &, &:hover{
+        text-decoration: none;
+        //color: #fff;
+    }
+
+    .is-active{
+        display: none;
+    }
+
+    &.active{
+
+        .is-active{
+            display: inline;
+        }
+
+        .is-inactive{
+            display: none;
+        }
+
+        &:before{
+            content: "\f106";
+        }
+    }
+
+    @include media(medium){
+        display: none;
+    }
+
+    &:before{
+        font-family: "FontAwesome";
+        content: "\f107";
+        margin-right: 0.3em;
+    }
+}
+
+
+/*
+Link more
+ */
+
+.link-more{
+
+
+    &, &:hover, &:visited{
+        color: $base-color;
+    }
+
+    &:after{
+        font-family: "FontAwesome";
+        content: "\f054";
+        font-weight: normal;
+        margin-left: 0.3em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+/**
+ * Block link
+ */
+
+.link-block{
+    display: block;
+    text-align: center;
+    border-top: 1px $base-ui-color solid;
+    padding: 10px 1em;
+    background: #fff;
+
+    .docsflow-sp-card + &{
+        border-top: none;
+    }
+
+    &:hover{
+        background-color: $color-brand;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+/**
+ * Link back
+ */
+
+.link--back{
+    &:before{
+        font-family: 'FontAwesome';
+        margin-right: 0.5em;
+        content: "\f060";
+    }
+}
+
+
+
+/**
+ * Remove favorite
+ */
+
+.list-fav{
+    > li{
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .remove-favorite{
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+}
+.remove-favorite{
+    font-size: 16px;
+    margin-top: 0px;
+    display: block;
+    // display: none;
+
+
+    li:hover &{
+        display: block;
+    }
+
+    &{
+        color: #ccc;
+    }
+
+    &:hover{
+        color: #000;
+    }
+    &:before{
+        font-family: "FontAwesome";
+        content: "\f00d";
+        content: "\f057";
+        font-weight: normal;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        // color: #888;
+    }
+}
+
+
+/**
+ * Link add
+ */
+
+.link-add{
+    &:before{
+        @extend %icon;
+        content: "\f067";
+    }
+}
+
+.link-edit{
+	color: #e3571a !important;
+    &:before{
+        @extend %icon;
+        content: "\f044";
+    }
+}
+
+.link-delete{
+	color: #e3571a !important;
+    &:before{
+        @extend %icon;
+        content: "\f1f8";
+    }
+}
+
+
+/**
+ * Edit question
+ */
+
+.link-edit-question{
+	color: #e3571a !important;
+    margin-left: 1em;
+}
+
+
+/**
+ * link-toggle-filter
+ */
+
+.link-toggle-filter{
+
+    font-size: 30px;
+
+    .fa{
+        margin: 0;
+    }
+}
+
+
+/**
+ * Delete attachment
+ */
+
+.link-delete-attachment{
+	color: #e3571a !important;
+    margin-left: 1em;
+    &:before{
+        @extend %icon;
+        content: "\f00d";
+    }
+}

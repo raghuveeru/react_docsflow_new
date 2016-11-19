@@ -1,0 +1,13 @@
+{
+	"data": [
+		{
+			"id": "admin",
+			"name": "Raghuveer U",
+			"designation": "Application Developer",
+			"department": "ISTD",
+			"role": [1, 2],
+			"type": "user",
+			"image": ".././images/profile-img.png"
+		}
+	]
+}

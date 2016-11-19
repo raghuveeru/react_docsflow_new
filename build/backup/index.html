@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>MOMster@Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory 		-->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/print.css" media="print">
+  <body>
+    <!-- Suite bar -->
+    <div class="sp-suite-bar">
+        <div class="container">
+          <nav class="nav-suite-bar">
+          <!-- Button-->
+          <div class="ui-dropdown"><a href="#">Raghuveer U<em class="fa fa-caret-down fa-last"></em></a>
+            <div class="dropdown arrow-right">
+              <div class="dropdown-inner"><a href="#">Link 1</a><a href="#">Link 2</a>
+                <div class="seperator"></div><a href="#">Link 3                          </a>
+              </div>
+            </div>
+          </div>
+          <!-- / Button-->
+          <!-- Button-->
+          <div class="notification-dropdown" id="momster-notification">
+          </div>
+          <!-- / Button--><a href="#"><em class="fa fa-cog"></em></a><a href="helpdesk.html"><em class="fa fa-question-circle"></em></a>
+        </nav>
+        </div>
+    </div>
+    <!-- / Suite bar -->
+    <!-- Header -->
+    <div class="sp-masthead">
+        <div class="container">
+            <a href="/" class="sp-site-logo">
+                <img src="images/logo.png" alt="MOMster">
+            </a>
+            <span class="sp-site-name">Doc flow</span>
+        </div>
+    </div>
+    <!-- / Header -->
+
+
+    <!-- App -->
+    <div id='root'>
+        <script>
+            var CURRENT_USER = {
+                id: '123'
+            };
+
+            window.onload = function(){
+              INITIALIZE_MOMSTER_COS();
+            }
+        </script>
+    </div>
+    <!-- / App -->
+
+    <!-- Footer -->
+    <!-- Footer-->
+    <div class="ui-module module-footer">
+      <div class="container">
+        <p>
+            Copyright &copy; 2015 Government of Singapore
+            <a href="#">Contact us</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy policy</a>
+      </div>
+    </div>
+    <!-- Footer-->
+    <!-- / Footer -->
+    <script src="vendor/jquery.min.js"></script>
+    <script src="config.js"></script>
+    <script src="dist/bundle.js"></script>
+    <script src="vendor/momster.js"></script>
+    <script src="vendor/select2.min.js"></script>
+    <script src="vendor/jquery.form.js"></script>
+    <script src="vendor/jquery.validate.min.js"></script>
+  </body>
+</html>
